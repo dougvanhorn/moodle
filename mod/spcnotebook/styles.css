@@ -1,0 +1,79 @@
+#page-mod-spcnotebook-view .feedbackbox {
+  width: 75%;
+  border-collapse: separate;
+}
+#page-mod-spcnotebook-view .entrycontent {
+  padding: 3px;
+}
+#page-mod-spcnotebook-view .picture {
+  width: 35px;
+}
+#page-mod-spcnotebook-view .info {
+  margin-bottom: 5px;
+  text-align: right;
+}
+#page-mod-spcnotebook-view .spcnotebookstart,
+#page-mod-spcnotebook-report .feedbacksave {
+  text-align: center;
+}
+#page-mod-spcnotebook-view .lastedit,
+#page-mod-spcnotebook-view .editend {
+  font-size: 0.7em;
+  margin: 5px;
+  text-align: center;
+}
+#page-mod-spcnotebook-view .author {
+  font-size: 1em;
+  font-weight: bold;
+}
+#page-mod-spcnotebook-view .time {
+  font-size: 0.7em;
+  font-style: italic;
+}
+#page-mod-spcnotebook-view .grade {
+  font-weight: bold;
+  font-style: italic;
+  text-align: right;
+}
+
+#page-mod-spcnotebook-index .cell {
+  font-size:0.8em;
+}
+#page-mod-spcnotebook-view .feedbackbox .left,
+#page-mod-spcnotebook-view .feedbackbox .entryheader {
+  background-color: #dddddd;
+}
+
+#page-mod-spcnotebook-view .feedbackbox {
+  -moz-border-radius-bottomleft:15px;
+  -moz-border-radius-bottomright:15px;
+  border-spacing: 0;
+  margin: 0 auto;
+}
+#page-mod-spcnotebook-view .feedbackbox .side {
+  -moz-border-radius-bottomleft:15px;
+}
+#page-mod-spcnotebook-view .feedbackbox .entrycontent {
+  -moz-border-radius-bottomright:15px;
+}
+
+#page-mod-spcnotebook-report .spcnotebookuserentry {
+  border: 1px solid #000000;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+#page-mod-spcnotebook-report .spcnotebookuserentry td {
+  padding: 10px;
+  vertical-align: top;
+  width: 100%;
+}
+#page-mod-spcnotebook-report .spcnotebookuserentry td.userpix {
+  width: 35px;
+}
+#page-mod-spcnotebook-report .spcnotebookuserentry td.userfullname {
+  white-space: nowrap;
+}
+#page-mod-spcnotebook-report .spcnotebookuserentry td .lastedit {
+  font-size: 0.76em;
+  margin-left: 10px;
+}
