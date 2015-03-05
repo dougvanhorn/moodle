@@ -20,39 +20,48 @@ done
 
 ## Mounting Extra EBS
 
-http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html
+[EBS Volumes](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html).
 
 1. Determine the EBS volume.
 
-    $ lsblk
+```sh
+$ lsblk
+```
 
 
 2. Check the Filesystem, create one if necessary.
 
-    $ sudo file -s /dev/xvdb
-    /dev/xvdb: data
+```sh
+$ sudo file -s /dev/xvdb
+/dev/xvdb: data
 
-    $ sudo mkfs -t ext4 /dev/xvdb
+$ sudo mkfs -t ext4 /dev/xvdb
+```
 
 
 3. Mount the device.
 
-    $ sudo mkdir /mnt/sdb
-    $ sudo mount /dev/xvdb /mnt/sdb
+```sh
+$ sudo mkdir /mnt/sdb
+$ sudo mount /dev/xvdb /mnt/sdb
+```
 
 
 4. Add the devide to `fstab`.
 
-    $ vim /etc/fstab
-    #device_name  mount_point  file_system_type  fs_mntops  fs_freq  fs_passno
-    /dev/xvdb  /mnt/sdb  ext4  defaults,nofail,nobootwait  0  2
+```sh
+$ vim /etc/fstab
 
+#device_name  mount_point  file_system_type  fs_mntops  fs_freq  fs_passno
+/dev/xvdb  /mnt/sdb  ext4  defaults,nofail,nobootwait  0  2
+```
 
 
 ## Installing Software
 
 List of all packages installed:
 
+```
 git
 apache2
 php5
@@ -63,7 +72,7 @@ php5-gd
 php5-xmlrpc
 php5-intl
 postgresql-client
-
+```
 
 
 List of all command lines run:
@@ -71,7 +80,8 @@ List of all command lines run:
 
 Configuring FPM, Apache2:
 
-https://serversforhackers.com/apache-proxy-fcgi/
+[Apache Proxy FCGI](https://serversforhackers.com/apache-proxy-fcgi/).
+
 
 Modified default apache site to serve FPM Moodle 2.8.
 
