@@ -41,9 +41,10 @@ echo $OUTPUT->doctype() ?>
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 
 <?php 
-//echo "<pre>";        
-//MYMODINFO a modified version of modinfo required by SPC template
-$mymodinfo = unserialize($PAGE->course->modinfo);
+
+
+$mymodinfo = get_fast_modinfo($PAGE->course);
+
 $course = $PAGE->course;
 require_once($CFG->dirroot.'/course/lib.php');
 $context = get_context_instance(CONTEXT_COURSE, $course->id);

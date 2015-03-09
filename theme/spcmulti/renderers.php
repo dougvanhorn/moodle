@@ -209,7 +209,7 @@ class theme_spcmulti_format_topics_renderer extends format_topics_renderer {
     //    return 'hello';
     //}
 
-    private function section_activity_summary($section, $course, $mods) {
+    protected function section_activity_summary($section, $course, $mods) {
         if (empty($section->sequence)) {
             return '';
         }
