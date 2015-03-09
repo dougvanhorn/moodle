@@ -7,11 +7,16 @@ https://docs.moodle.org/dev/Git_for_developers
 To keep stable branches up to date:
 
 ```sh
-#!/bin/sh
 git fetch upstream
 for BRANCH in MOODLE_{19..28}_STABLE master; do
     git push origin refs/remotes/upstream/$BRANCH:$BRANCH
 done
+```
+
+To Merge changes from a Branch into TL28:
+
+```sh
+git merge --no-ff origin/MOODLE_28_STABLE
 ```
 
 
