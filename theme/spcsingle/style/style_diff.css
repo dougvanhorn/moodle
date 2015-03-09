@@ -1,0 +1,729 @@
+/* Teacherline Course-specific Styles 
+-------------------------------------------------------------------------------*/
+
+/* Colissions with original style_tlcourses.css are commented out.
+-------------------------------------------------------------------------------*/
+
+/*
+.tlCourseParts {font-size: 0.9rem; }
+.tlCourseSmall {font-size: 0.9rem; }
+.tlCourseTiny  {font-size: 0.8rem; }
+.tlCourseLarge {font-size: 1.2rem; }
+
+.tlSessions   { color: #000000;  font-weight: bold; }
+
+a:link.tlSessions { color: #000000;  font-weight: bold; text-decoration: none;}
+a:visited.tlSessions { color: #000000;  font-weight: bold; text-decoration: none;}
+a:active.tlSessions  { color: #000000;  font-weight: bold; }
+a:hover.tlSessions   {text-decoration: underline;}
+
+.rubric { width: 100%; margin:.2em; border-collapse: collapse; 
+empty-cells:show; margin: .75em; }
+*/
+
+/* Extensions to original style_tlcourses.css
+-------------------------------------------------------------------------------*/
+.BookTitle{font-style: italic;}
+.checklist h2 {
+	font-size: 0.8em;
+	margin: 0.4em 0 1em;
+}
+#main_illustration {
+  width:         250px;
+  float:         right;
+  position:      relative;
+  top:           0px;
+  margin-bottom: -32px;
+}
+#mi2 {
+  visibility:    hidden;
+  width:         250px;
+}
+#mi1 {
+  position:      absolute;
+  width:         250px;
+}
+/*#mi1:hover {
+  position:      absolute;
+  right:         0;
+  visibility:    visible;
+  width:         auto;
+  
+  background:    none repeat scroll 0 0 white;
+  border:        3px solid darkgray;
+  padding:       3px;
+}*/
+.rubric thead {background: none repeat scroll 0 0 #E4E4E4;}
+.tlSessionPart {
+	border-top: 1px solid #CFCFCF;
+	margin-top: 3rem;
+	padding: 2rem 0;
+}
+.rubric td li {
+	margin: 1rem 0 0 -10px;
+}
+table.rubric td h2 {
+	margin: 0;
+}
+td h2 {
+	font-size: 0.8em;
+	margin: 0.5em 0;
+}
+td:first-child {
+	width: 120px;
+}
+td{
+padding: 0.5em!important;
+}
+li,p,blockquote,em,cite{font-size: 1em;}
+li{}
+ul {
+	list-style-type: disc;
+}
+ol ul li {
+	margin-left: -10px;
+}
+.img_left {
+	border: 0 none;
+	float: left;
+	margin: 0 12px 0 0;
+	padding: 0;
+}
+blockquote{}
+blockquote.simpleindent {
+	font-style: normal;
+}
+
+.Menu {
+	color: #0066CC;
+}
+
+#pagecontent{max-width:600px; margin: 1em auto; min-height: 800px;}
+h1{
+	font-weight: bold!important;
+	font-size: 14px!important;
+}
+
+blockquote li {
+	margin: 0;
+	padding-bottom: 0;
+	padding-top: 0;
+}
+/* Edit Aids
+-------------------------------------------------------------------------------*/
+mark {  background-color: #FCD700;  color: #000000;  cursor: pointer;  font-size: 8px;  font-style: italic;  outline: 1px solid black;  padding: 3px;  position: relative;  top: -5px;}
+
+
+/* New Styles
+-------------------------------------------------------------------------------*/
+.foot_padding{min-height:600px}
+.popup {
+  background: url("img/extlink1.png") no-repeat scroll 100% 4px transparent;
+  margin: 0 0 0 -2px;
+  padding: 0 12px 0 2px;
+  border-bottom: 1px solid #C3E0E6;
+}
+a.popup:hover {
+    background-color: #C9E4ED;
+}
+.clear {
+	clear: both;
+}.popup:hover {
+  background-color: #EAF2F5;
+}
+h4 {
+  font-size: 85%!important;
+}
+#pagecontent > div#sessionname {
+  border-bottom: 3px solid #BBBBBB;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin: 0 0 0.4em;
+  padding: 0 0 0.3em;
+}
+p.backtotop {
+	text-align: right;
+	width: 100%;
+}
+span.backtotop {
+	font-weight: normal;
+	float: right;
+}
+td > ul li {
+	background: url("img/bullet.png") no-repeat scroll 0 6px transparent;
+	list-style: none inside none;
+	margin: 1em 0 0 -39px;
+	padding: 0 0 0 8px;
+}
+ol ul {
+	list-style-type: disc;
+	margin: 0.5em 0;
+}
+.basicbox {
+	border: 1px solid #CCCCCC;
+	border-radius: 5px 5px 5px 5px;
+	margin: 1em 0;
+	padding: 0 2em;
+}
+a.backtotop, a.backtotop:active, a.backtotop:visited {
+	background: none repeat scroll 0 0 #DEDEDE;
+	border: 1px solid #A7A7A7;
+	border-radius: 3px 3px 3px 3px;
+	float: right;
+	font: 0.7rem/0.7rem verdana;
+	padding: 3px 6px 4px;
+	text-decoration: none;
+}
+a.backtotop:hover {
+	background: none repeat scroll 0 0 #A7A7A7;
+	color: white;
+}
+div.Quote {
+  /*border-bottom: 1px solid #B7B7B7;
+  border-top: 1px solid #B7B7B7;*/
+  display: table-cell;
+  font-style: italic;
+  padding: 0.4em 2em;
+  text-align: left;
+}
+.QuoteAuthor {
+  float: right;
+  margin-right: 1em;
+  max-width: 50%;
+  text-align: left;
+  text-indent: -2em; /* this indent is related to the inserted characters below*/
+}
+.QuoteAuthor::before {
+  content: "\2014\2003";/* Hexadecimal for Unicode Em Dash (&mdash;) and 1 Em space - http://www.htmlhelp.com/reference/html40/entities/special.html*/
+  display: inline;
+}
+.Quote {
+	margin: 1.8em;
+	text-align: left;
+	font-style: italic;
+	display: table-row;
+}
+div.QuoteAuthor {
+	display: block;
+	font-style: italic;
+}
+.Quote > p, 
+.QuoteAuthor {
+  color: #4F4F4F;
+  font: italic 1em/1.4rem georgia,serif;
+  letter-spacing: 0.04em;
+  margin-bottom: 0;
+  margin-left: 0.6em;
+}
+.Quote > p{
+  text-indent: -.6em;}
+.Quote > p::before {
+  content: "\22\2009";/* Hexadecimal for Unicode Quote (&quot;) and 1 Em space - http://www.htmlhelp.com/reference/html40/entities/special.html*/
+  display: inline;
+}
+.Quote > p::after {
+  content: "\22";/* */
+  display: inline;
+}
+
+#CitationsandReferences {
+	margin: 3em 0;
+	outline: 1px solid #DBDBDB;
+	padding: 3px;
+}
+.clicktoggle {
+	display: inline-block;
+	float: left;
+	margin: 0 8px 0 0;
+	padding: 0;
+	position: relative;
+	top: -8px;
+}
+#collapse {
+	padding: 25px;
+}
+#CitationsandReferences > h2 {
+	line-height: 1rem;
+	margin: 0 0 -10px;
+	padding: 6px 0 0;
+	position: relative;
+	top: -1rem;
+}
+
+p.Horizontalline, li.Horizontalline, div.Horizontalline {
+	border-top: 1px solid #EAEAEA;
+	color: #EAEAEA;
+	font-size: 1px;
+	margin: 1.8rem 0 0;
+	padding: 0;
+}
+
+.Icon {
+	display: inline-block;
+	font-size: 10pt;
+	font-style: italic;
+	height: 34px;
+	margin: 0 0 0 4px;
+	position: relative;
+	text-indent: 0;
+	top: -8px;
+	width: 42px;
+}
+.Discussion	{background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_discussion.gif") no-repeat scroll 0 0 transparent;}
+.Interactive{background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_interactive.gif") no-repeat scroll 0 0 transparent;}
+.Journal	{background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_journal.gif") no-repeat scroll 0 0 transparent;}
+.Paper		{background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_paper.gif") no-repeat scroll 0 0 transparent;}
+.Reading	{background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_reading.gif") no-repeat scroll 0 0 transparent;}
+.Survey		{background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_survey.gif") no-repeat scroll 0 0 transparent;}
+.Video		{background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_video.gif") no-repeat scroll 0 0 transparent;}
+.Audio		{background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_audio.gif") no-repeat scroll 0 0 transparent;}
+.PBSicon	{background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_pbs.gif") no-repeat scroll 0 0 transparent;}
+.NASAicon	{background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_nasa.gif") no-repeat scroll 0 0 transparent;}
+
+.CitationsReferencesBtn {
+	margin: 25px 0;
+	padding: 10px;
+	text-align: left !important;
+}
+#IconOverview .Icon {
+	margin: 0 6px 6px 0;
+}
+#IconOverview td {
+	border: medium none;
+	padding: 0;
+	white-space: nowrap;
+	width: 10%;
+}
+#IconOverview p {
+	margin: 15px 0 0;
+}
+.session_resource dd {
+  border-bottom: 1px solid #D9D9D9;
+  margin-left: 0;
+}
+.session_resource dd:last-child {
+  border-bottom: medium none;
+}
+.differentiated_prompt{}
+table.JournalPromptTable,
+table.DiscussionPromptTable,
+table.rolebox{ margin: 2rem 0 2rem 3rem;  width: 90%;}
+table#CitationsReferencesTbl{margin-top: -20px;}
+
+table.JournalPromptTable td,
+table.DiscussionPromptTable td,
+table#CitationsReferencesTbl td,
+table.rolebox td 
+{padding: 2rem;}
+
+
+table.DiscussionPromptTable {background: none repeat scroll 0 0 #F4F4F4;}
+table.JournalPromptTable {background: none repeat scroll 0 0 #D9ECF4;}
+table.rolebox      {background: none repeat scroll 0 0 #EAEAEA;}
+
+.current{font-weight: bold;}
+p.CourseFooter, li.CourseFooter, div.CourseFooter {
+border-top: 1px solid #A7A7A7;
+color: gray;
+font-style: italic;
+margin: 2rem 0;
+padding: 1rem;
+text-align: center;
+}
+.flashhelp {/*this hides some legacy flash help text that might be requested enabled later*/
+  background: none repeat scroll 0 0 white;
+  bottom: -700px;
+  float: left;
+  outline: 1px solid black;
+  padding: 1em;
+  position: absolute;
+  visibility: hidden;
+  width: 580px;
+  z-index: 1000;
+}
+p.navitem, li.navitem, div.navitem {
+	color: black;
+	font-size: 10pt;
+	margin-left: 0.25in;
+	margin-top: 0;
+	text-indent: -0.25in;
+}
+p.navitemselected, li.navitemselected, div.navitemselected {
+color: black;
+font-size: 10pt;
+font-weight: bold;
+line-height: 115%;
+margin-bottom: 10pt;
+margin-left: 0.25in;
+margin-top: 0;
+text-indent: -0.25in;
+}
+
+.jumplink{}
+
+.nolines td {
+	border: 1px none white;
+}
+table.nolines  {
+	border: 1px none white;
+}
+.checklist{}
+
+table.checklist {
+  border-collapse: collapse;
+  font: inherit;
+  width: 100%;
+}
+table.allcenter td {
+	text-align: center;
+}
+.sessionresources td {padding: 12px;}
+.sessionresources tr {vertical-align: top;}
+table.sessionresources tr td:first-child { width: 10%; }
+.sessionresources th, 
+.sessionresources td {border: 1px solid silver;}
+table.checklist,
+table.checklist th, 
+table.checklist td {border: 1px solid silver;}
+table.checklist td {padding: 12px;}
+table.checklist tr {vertical-align: top;}
+table.checklist th {
+	text-align: left;
+}
+table.checklist tr td:first-child { width: 50%; }
+
+
+.ResourceTable   {}
+table.ResourceTable tr td:first-child { width: 10%; }
+table.ResourceTable {border-collapse:collapse;}
+table.ResourceTable,
+table.ResourceTable th, 
+table.ResourceTable td {border: 1px solid silver;}
+table.ResourceTable td {padding: 25px;}
+table.ResourceTable tr {vertical-align: top;}
+table.ResourceTable th {}
+
+
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText {
+font-size: 10pt;
+margin-bottom: 10pt;
+margin-top: 0;
+}
+
+/* Navbar Style 1 (s1): Pipe separator*/
+#navcontainer_s1 { margin-left: 0px; }
+
+#navlist_s1
+{
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+#navlist_s1 li
+{
+display: inline-block;
+padding: 0;
+margin: 0;
+}
+
+.ns1{src:"image001.png"} 
+.ns2{src:"image002.png"} 
+.ns3{src:"image003.png"} 
+.ns4{src:"image004.png"} 
+.ns5{src:"image005.png"} 
+.ns6{src:"image006.png"} 
+
+#navlist_s1 li:before { content: "| "; }
+#navlist_s1 li:first-child:before { content: ""; }
+#navlist_s1 #active{}
+#navlist_s1 #current{font-weight: bold;}
+
+#nav-session li {
+	display: block;
+	float: left;
+	line-height: 1rem;
+	margin: 2px;
+	padding: 55px 0 6px;
+	text-align: center;
+	width: 93px;
+}
+#nav-session-container {
+	float: left;
+	margin: 0 0 2rem;
+	 width: 100%;
+}
+ul#nav-session {
+	background-color: #E6F7F7;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+#nav-session li.current {
+	background-color: #C3E2E2;
+	font-weight: bold;
+}
+			.nav-session-1{background: url("http://teacherline.pbs.org/teacherline/courses/MATH165/images/session1_sm.jpg") no-repeat scroll 0 0 transparent;}
+			.nav-session-2{background: url("http://teacherline.pbs.org/teacherline/courses/MATH165/images/session2_sm.jpg") no-repeat scroll 0 0 transparent;}
+			.nav-session-3{background: url("http://teacherline.pbs.org/teacherline/courses/MATH165/images/session3_sm.jpg") no-repeat scroll 0 0 transparent;}
+			.nav-session-4{background: url("http://teacherline.pbs.org/teacherline/courses/MATH165/images/session4_sm.jpg") no-repeat scroll 0 0 transparent;}
+			.nav-session-5{background: url("http://teacherline.pbs.org/teacherline/courses/MATH165/images/session5_sm.jpg") no-repeat scroll 0 0 transparent;}
+			.nav-session-6{background: url("http://teacherline.pbs.org/teacherline/courses/MATH165/images/session6_sm.jpg") no-repeat scroll 0 0 transparent;}
+/*IE workaround -- All IE browsers*/
+* html #navlist_s1 li{
+border-left: 1px solid black;
+padding: 0 0.4em 0 0.4em;
+margin: 0 0.4em 0 -0.4em;
+}
+ul.navitem {
+	border: 1px solid #DBDBDB;
+	border-radius: 5px 5px 5px 5px;
+	list-style: none outside none;
+	padding: 0 ;
+}
+.navitem > li {
+	border-radius: 2px 2px 2px 2px;
+	display: inline-block;
+	margin: -1px;
+	padding: 0.3em 0.6em;
+}
+li.current {
+	background: none repeat scroll 0 0 #EAEAEA;
+	border: 1px solid #CBCBCB;
+	font-weight: bold;
+	padding: 0 6px !important;
+}
+/*Win IE browsers - hide from Mac IE */ * html #navlist_s1 { height: 1%; } * html #navlist_s1 li{display: block;float: left;}
+/*Mac IE 5*/* html #navlist_s1 li:first-child { border-left: 0; }
+
+/* ============================================== */.img_right {
+	float: right;
+	margin-left: 1.2em;
+}
+.rubricpage table {
+	table-layout: fixed;
+}
+/*topnav and its tabs*/
+
+div#topnav {
+  background: url("img/line.png") repeat-x scroll 2px 20px transparent;
+  margin: 0 0 25px;
+}
+
+.tab {
+  border: 1px solid #C1C1C1;
+behavior: url(ie-css3.htc);
+  margin: 0 -2px 0 0;
+  padding: 5px 7px 0;
+  position: relative;
+  text-transform: uppercase;
+  top: 2px;
+  -webkit-border-radius: 6px;
+  -webkit-border-bottom-right-radius: 1px;
+  -webkit-border-bottom-left-radius: 1px;
+  -moz-border-radius: 6px;
+  -moz-border-radius-bottomright: 1px;
+  -moz-border-radius-bottomleft: 1px;
+  border-radius: 6px;
+  border-bottom-right-radius: 1px;
+  border-bottom-left-radius: 1px;
+}
+a.tab {
+  text-decoration: none;
+}
+span.tab {
+  border-bottom: 1px solid #fff;
+}
+a.tab:hover {
+  background-color: #CCE7F5;
+}
+div#topnav span.tab:first-child {
+  border: none;
+  color: #A6A6A6;
+  font-family: arial;
+  font-size: 1.15em;
+  font-weight: bold;
+  margin: 0 12px 0 -8px;
+  text-transform: uppercase;
+     background: none repeat scroll 0 0 transparent;
+}
+#sessionparttitle {
+  border-bottom: 1px solid #C4DFEE;
+  padding: 0 0 1em;
+}
+#sessionparttitle .txt01-sm {
+  color: gray;
+  font-size: 0.85em;
+  letter-spacing: 0.5em;
+  margin: 0 0 -2px;
+  padding: 0;
+  text-transform: uppercase;
+}
+#sessionparttitle .txt02-lg {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+#sectionnav {
+  font-size: 0.8em;
+  margin: 0 0 3em;
+}
+#sectionnav > a {
+  text-decoration: none;
+}
+
+.hovertoggle{/*testing*/
+  outline: 1px solid red;
+  }
+.hovertoggle{
+float: left;
+  height: 22px;
+  overflow: hidden;
+  position: absolute;
+  background-color:white;
+  }
+.hovertoggle:hover{
+  float: left;
+  height: 115px;
+  outline: 1px solid red;
+  overflow: hidden;
+  position: absolute;
+  }
+dl.QA dt.hovertoggle{
+  width: 300px;
+  background-color:white;
+}
+/*--------------------------------------------*/
+dl.QA dt {
+  font-weight: normal;
+}
+dl.QA dt.reveal {
+  background: none repeat scroll 0 0 #F9F9F9;
+  border: 1px solid #DEDEDE;
+  color: #0E0E0E;
+  height: 1.2em;
+  text-align: center;
+  width: 150px;
+  cursor: pointer;
+}
+dl.QA dt.revealopen {
+  background: none repeat scroll 0 0 #F7F7F7;
+  color: black;
+  padding-left: 1.5em;
+  text-align: left;
+  width: auto;
+}
+dl.QA {
+  border-top: 1px solid #C0E4F5;
+}
+
+dt.reveal > h4 {
+  margin: 0;
+}
+ .reveal {
+    height: 1em;
+    overflow: hidden;
+ }
+.revealopen {
+  height: auto !important;
+  padding: 1em 1.2em 1em 1.3em;
+}
+
+
+.session_resource {
+  border: 1px solid #ADADAD;
+  padding: 2em;
+}
+.session_resource > dl > dd > p {
+  padding: 0 0 0 1em;
+}
+.vidplayer {
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+.vidholder {
+  background-color: red;
+  background-repeat: no-repeat;
+  height: 75px;
+  width: 99px;
+}
+.video_help {
+  position: absolute;
+  top: 1px;
+  visibility: visible;
+  z-index: 100;
+}
+.video_help {
+  display: block;
+  outline: 1px solid gold;
+  padding: 0;
+}
+.video_help > h4 {
+  background: url("../images/video-help.png") no-repeat scroll 0 0 transparent;
+  margin: 0;
+  padding: 0;
+}
+#videoplayer {
+  background: none repeat scroll 0 0 transparent;
+  border: medium none;
+  float: left;
+  height: 204px;
+  margin: 0 1.5em 1em 0;
+  overflow: hidden;
+  padding: 0.4em 0 0;
+  width: 265px;
+}
+.videoplayer {
+  background: none repeat scroll 0 0 #D3D3D3;
+  border: 1px solid #1F4B81;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  float: left;
+  margin: 3px 1em 1em 0;
+  max-width: 250px;
+  min-width: 250px;
+  padding: 1em;
+  text-align: left;
+}
+.vcategory {
+  color: #514F4F;
+  display: block;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.vtitle {
+  display: block;
+  padding-left: 63px;
+}
+.videoplayer img {
+  display: block;
+  float: left;
+  margin: 0 1em 0 0;
+}
+img.v_thumb {
+  border: 3px solid white;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+}
+.ederr {
+  background: url("../images/error_icon.gif") no-repeat scroll 0 2px transparent;
+  padding-left: 19px;
+}
+span.caption {
+  background: none repeat scroll 0 0 #0B4F80;
+  color: white;
+  font-size: 0.8em;
+  margin: 0 0 13px;
+  padding: 8px 0;
+  text-align: center;
+}
+table.intro td, table.intro th {
+  border: medium none !important;
+  padding: 0 !important;
+}
+table.intro .Quote {
+  padding: 0;
+}
+table.intro td:first-child{ width:auto;}

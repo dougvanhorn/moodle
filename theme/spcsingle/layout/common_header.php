@@ -1,0 +1,166 @@
+<?php
+require_once("{$CFG->libdir}/completionlib.php");
+$hassidepre = $PAGE->blocks->region_has_content('side-pre', $OUTPUT);
+$hassidepost = $PAGE->blocks->region_has_content('side-post', $OUTPUT);
+//$showsidepre = $hassidepre && !$PAGE->blocks->region_completely_docked('side-pre', $OUTPUT);
+//$showsidepost = $hassidepost && !$PAGE->blocks->region_completely_docked('side-post', $OUTPUT);
+
+$custommenu = $OUTPUT->custom_menu();
+$hascustommenu = (empty($PAGE->layout_options['nocustommenu']) && !empty($custommenu));
+
+$bodyclasses = array();
+// if ($showsidepre && !$showsidepost) {
+//     if (!right_to_left()) {
+//         $bodyclasses[] = 'side-pre-only';
+//     }else{
+//         $bodyclasses[] = 'side-post-only';
+//     }
+// } else if ($showsidepost && !$showsidepre) {
+//     if (!right_to_left()) {
+//         $bodyclasses[] = 'side-post-only';
+//     }else{
+//         $bodyclasses[] = 'side-pre-only';
+//     }
+// } else if (!$showsidepost && !$showsidepre) {
+//     $bodyclasses[] = 'content-only';
+// }
+if ($hascustommenu) {
+    $bodyclasses[] = 'has_custom_menu';
+}
+$fullbaseurl = "$CFG->wwwroot";
+echo $OUTPUT->doctype() ?>
+<html <?php echo $OUTPUT->htmlattributes() ?>>
+<head>
+    <title><?php echo $PAGE->title ?></title>
+    <link rel="shortcut icon" href="<?php echo $OUTPUT->pix_url('favicon', 'theme')?>" />
+    <meta name="description" content="<?php p(strip_tags(format_text($SITE->summary, FORMAT_HTML))) ?>" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+    <?php echo $OUTPUT->standard_head_html() ?>
+</head>
+<body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
+<?php echo $OUTPUT->standard_top_of_body_html() ?>
+
+<?php 
+//echo "<pre>";        
+//MYMODINFO a modified version of modinfo required by SPC template
+$mymodinfo = unserialize($PAGE->course->modinfo);
+$course = $PAGE->course;
+require_once($CFG->dirroot.'/course/lib.php');
+$context = get_context_instance(CONTEXT_COURSE, $course->id);
+$currmod = get_context_instance(CONTEXT_MODULE, $course->id);
+
+// ADD GRADES GET BRANDING IMAGE
+// adds gradeinfo array to each graded activity in mymodinfo array
+require_once($CFG->libdir.'/gradelib.php');
+//echo $COURSE->id;
+//$completioninfo = new completion_info($COURSE->id);
+//$completiondata = $completioninfo->get_data($thismod, true);
+foreach ($mymodinfo as $key => $currentarry) {
+    // GRADES.
+    if ($currentarry->mod=='quiz') {
+        $quizid  = $currentarry->id;
+        $grading_info = grade_get_grades($COURSE->id, 'mod', 'quiz', $quizid, $USER->id);
+        if (!empty($grading_info->items)) {
+            $item = $grading_info->items[0];
+            if (isset($item->grades[$USER->id])) {
+                $grade = $item->grades[$USER->id];
+                if ($grade->overridden) {
+                    // Convert to number.  You so crazy, PHP.  I wanna have yo baby and call it Javascript.
+                    $mygrade = $grade->grade + 0;
+                    $mygradeoverridden = true;
+                }
+                if (!empty($grade->str_feedback)) {
+                    $gradebookfeedback = $grade->str_feedback;
+                }
+            }
+            $currentarry -> gradeinfo = $item;
+        }
+    }
+        
+    // BRANDING and other images.
+    $currname='';
+    if ($currentarry->mod=='resource') {
+        $currname=$currentarry->name.'_url';
+        $context = get_context_instance(CONTEXT_MODULE, $currentarry->cm);
+        $currentarry -> context = $context;
+        $br_contextid = $currentarry ->context->id;
+        $br_arrpath = explode("/", $currentarry ->context->path);
+        $filestore = get_file_storage();
+        $br_filelist = $filestore->get_area_files($br_contextid, 'mod_resource', 'content', 0, 'sortorder DESC, id ASC', false);
+        foreach ($br_filelist as $f) { $br_filename = $f->get_filename(); }
+        $$currname = "$CFG->wwwroot/pluginfile.php/$br_contextid/mod_resource/content/$br_arrpath[1]/$br_filename";
+    }
+}
+
+//ADD GRADES end
+
+// CUSTOM COURSE DATA HACK
+
+// Uses Moodle's "label" activity to store custom course data
+// Recursively traverses $modinfo to find "label" resources
+// if the contents of "label" are formated properly extract 
+// as an array variable. Pipe "|" is used as a separator.
+// format: variable_name_desired|one|or|more|content|elements|separated|by|pipes
+// e.g. Top Menu Item (has two array members):
+// top_menu_item|'Additional PD'|http://teacherline.org/search.py?terms=term
+foreach ($mymodinfo as $key => $arr_value) {
+    $currentarry = $arr_value;
+    //print_r($currentarry);
+    if ($currentarry->mod =='label') {
+        $value = $currentarry->extra;
+        $value=preg_replace('/<[^>]*>/', '', $value);//clean-out html tags
+        $contentsarray=explode("|",$value);          //convert to array
+        $newvariable=array_shift($contentsarray);    //remove first array element BUT keep it to name the new variable
+        $$newvariable=$contentsarray;                //($$)makes a new variable with $newvariable as its key and $contentsarray as content.
+    }
+}
+//HACK end
+//print_r($mymodinfo);
+//echo "</pre>";
+?>
+
+<div id="page">
+    <div id="msgid"></div>
+    <div id="headerbox">
+        <?php if (isset($top_menu_item1) || isset($top_menu_item2) || isset($top_menu_item3)) { ?>
+        <!-- Display the custom menu block if we have a menu. -->
+        <div id="custommenu" class="rnd">
+            <div id="custom_menu" class="spc-menu spc-menu-horizontal">
+                <div class="spc-menu-content">
+                    <ul>
+                        <?php if(isset($top_menu_item1)) { ?>
+                        <li class="spc-menuitem">
+                            <a class="spc-menuitem-content" title="<?php echo $top_menu_item1[0];?>" href="<?php echo $top_menu_item1[1];?>"><?php echo $top_menu_item1[0];?></a>
+                        </li>
+                        <?php } ?>
+                        <?php if(isset($top_menu_item2)) { ?>
+                        <li class="spc-menuitem">
+                            <a class="spc-menuitem-content" title="<?php echo $top_menu_item2[0];?>" href="<?php echo $top_menu_item2[1];?>"><?php echo $top_menu_item2[0];?></a>
+                        </li>
+                        <?php } ?>       
+                        <?php if(isset($top_menu_item3)) { ?>
+                        <li class="spc-menuitem">
+                            <a class="spc-menuitem-content" title="<?php echo $top_menu_item3[0];?>" href="<?php echo $top_menu_item3[1];?>"><?php echo $top_menu_item3[0];?></a>
+                        </li>
+                        <?php } ?>
+                    </ul>
+                </div>
+            </div><!-- custom_menu-->
+        </div><!-- custommenu -->
+        <?php } ?>
+
+        <?php 
+        $brand_main_logo  = (isset($branding_url  ))? $branding_url      : $OUTPUT->pix_url('PBSTeacherLine-logoSPC', 'theme');
+        $brand_back_art   = (isset($brandback_url ))? $brandback_url     : $OUTPUT->pix_url('base-back_trnsp_blue', 'theme');
+        $brand_back_color = (isset($branding_color))? $branding_color[0] :'transparent';
+        ?>
+
+        <div id="page-branding" class="rnd shdw" <?php echo "style='background:url($brand_back_art)repeat scroll 0 0 $brand_back_color;'";?>>
+            <div class="cobrand-logo">
+                <?php echo "<img src='$brand_main_logo'/>";?>
+            </div>
+            <div class="brand-logo">
+                <div id="PBSTeacherline" class="powered-by">PBS Teacherline</div>
+            </div>            
+        </div>
+    </div>
