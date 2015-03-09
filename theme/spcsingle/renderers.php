@@ -1,5 +1,13 @@
 <?php 
 
+
+/**
+ * Overridden renderers are triggered by the $THEME->rendererfactory = 
+ * 'theme_overridden_renderer_factory' setting.
+ *
+ * Naming convention overrides the Default Core Renderer.  An instance of 
+ * this object will be available as $OUTPUT in the Layout files.
+ */
 class theme_spc_core_renderer extends core_renderer {
      /**
      * Renders a custom menu object (located in outputcomponents.php)

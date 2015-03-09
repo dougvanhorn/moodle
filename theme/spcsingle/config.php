@@ -105,4 +105,6 @@ $THEME->layouts = array(
 /** List of javascript files that need to be included on each page */
 $THEME->javascripts = array('jquery-1.9.1', 'jquery.simplemodal.1.4.4.min', 'spc.functions');
 $THEME->javascripts_footer = array();
+
+// Tell Moodle to look for overridden renderers in the renderer.php file.
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
