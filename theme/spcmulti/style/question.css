@@ -1,0 +1,232 @@
+/* Question */
+/*hidden elements*/
+/*div#mod_quiz_navblock {
+  visibility: hidden;
+}*/
+
+table.quizreviewsummary {
+  position: absolute;
+  visibility: hidden;
+}
+.quizattemptsummary {
+  position: absolute;
+  visibility: hidden;
+}
+body#page-mod-quiz-view h2.main {
+  position: absolute;
+  visibility: hidden;
+}
+
+/*div.region-content > h2.main {
+  color: gray;
+  font-size: 2.2em;
+  font-weight: 100;
+  margin: 1em 0 1em 5px;
+  position: relative !important;
+  visibility: visible !important;
+}*/
+.box.quizinfo {
+  position: absolute;
+  visibility: hidden;
+}
+div.info > .grade {
+  visibility: hidden;
+}
+/*submit buttons*/
+div.region-content > .submitbtns {
+  float: right;
+
+  position: relative;
+
+}
+.submitbtns > a{
+ }
+.submitbtns a.arrow_link
+{
+  padding: 5px 5px 5px 10px;
+  text-transform: uppercase;
+}
+.submitbtns.mdl-align {
+  top: 0 !important;
+}
+div.ft span.button-group button[type="button"] {
+  margin: 0 0 0 12px;
+  text-transform: uppercase;
+}
+div#mod_quiz_navblock .title > H2 {
+  font-size: 1em;
+}
+
+/* original Question CSS*/
+.questionbank h2 {margin-top: 0;}
+.questioncategories h3 {margin-top: 0;}
+
+#chooseqtypebox {margin-top: 1em;}
+#chooseqtype h3 {margin: 0 0 0.3em;}
+#chooseqtype .instruction {display: none;}
+#chooseqtype .fakeqtypes {border-top: 1px solid silver;}
+#chooseqtype .qtypeoption {margin-bottom: 0.5em;}
+#chooseqtype label {display: block;}
+#chooseqtype .qtypename img {padding: 0 0.3em;}
+#chooseqtype .qtypesummary {display: block;margin: 0 2em;}
+#chooseqtype .submitbuttons {margin: 0.7em 0;text-align: center;}
+
+#qtypechoicecontainer {display: none;}
+body.jsenabled #qtypechoicecontainer {display: block;}
+
+#qtypechoicecontainer_c.yui-panel-container.shadow .underlay {background: none;}
+#qtypechoicecontainer.yui-panel .hd {/*color:#333333;letter-spacing: 1px;text-shadow: 1px 1px 1px #FFFFFF;border-radius: 10px 10px 0 0;border: 1px solid #CCCCCC;border-bottom: 1px solid #BBBBBB;background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#CCCCCC));background: -moz-linear-gradient(top,  #FFFFFF,  #CCCCCC);*/}
+
+#qtypechoicecontainer {/*font-size: 12px;color: #333333;background: #F2F2F2;border-radius: 10px;border:1px solid #CCCCCC;border-top:0 none;-webkit-box-shadow: 5px 5px 20px 0px #666666;-moz-box-shadow: 5px 5px 20px 0px #666666;box-shadow: 5px 5px 20px 0px #666666;*/}
+#qtypechoicecontainer #chooseqtype {width: 35em;}
+#qtypechoicecontainer #chooseqtypehead h3 {margin: 0;font-weight: normal;}
+#qtypechoicecontainer #chooseqtype .qtypes {position: relative;border-bottom: 1px solid /*#BBBBBB*/;padding: 0.24em 0;}
+#qtypechoicecontainer #chooseqtype .qtypeoption {margin-bottom: 0; padding: 0.3em 0 0.3em 1.6em;}
+#qtypechoicecontainer #chooseqtype .qtypeoption img {vertical-align: middle;padding-left: 1em;padding-right: 0.5em;}
+#qtypechoicecontainer #chooseqtype .selected {background-color: #FFFFFF;box-shadow: 0px 0px 10px 0px #CCCCCC;-webkit-box-shadow: 0px 0px 10px 0px #CCCCCC;-moz-box-shadow: 0px 0px 10px 0px #CCCCCC;}
+#qtypechoicecontainer #chooseqtype .instruction,
+#qtypechoicecontainer #chooseqtype .qtypesummary {display: none;position: absolute;top: 0px;right: 0px;bottom: 0px;left: 60%;margin: 0;padding: 1.5em 1.6em;background-color: #FFFFFF;}
+#qtypechoicecontainer #chooseqtype .instruction,
+#qtypechoicecontainer #chooseqtype .selected .qtypesummary {display: block;}
+
+#categoryquestions { margin: 0; }
+#categoryquestions td,
+#categoryquestions th { padding: 0 0.2em; }
+.questionbank .singleselect { margin: 0; }
+body.path-mod-quiz form {
+  margin: 0 !important;
+}
+/* Question editing form */
+#combinedfeedbackhdr div.fhtmleditor {padding: 0;}
+#combinedfeedbackhdr div.fcheckbox {margin-bottom: 1em;}
+.answer div > label {
+  margin: 12px;
+}
+div.ablock > div.answer > div {
+  border-radius: 5px 5px 5px 5px;
+}
+#page-mod-quiz-attempt .submitbtns, #page-mod-quiz-review .submitbtns {
+  clear: left;
+  padding: 1px;
+  text-align: right;
+}
+div.ablock > .prompt {
+  font-size: 1.3em;
+  line-height: 2em;
+}
+.que {clear: left;text-align: left;margin: 0 auto 1.8em auto;}
+.dir-rtl .que {text-align: right;}
+
+.que .info {
+  background: none repeat scroll 0 0 transparent;
+  float: left;
+  margin: 0.5em 0 0;
+  padding: 0;
+  width: 100%;
+}
+.que h2.no {
+  float: left;
+  font-size: 1.4em;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0;
+}
+.que span.qno {font-weight:normal;}
+.que .info > div {
+  float: right;
+  font-size: 0.8em;
+  padding: 0 10px;
+}
+.que .info .questionflag.editable {visibility:hidden;cursor:pointer;}
+.que .info .editquestion img,
+.que .info .questionflag img,
+.que .info .questionflag input {vertical-align: bottom;}
+
+.que .content {
+  clear: both;
+  margin: 0;
+  padding: 1.5em 0 0;
+}
+
+.que .formulation,
+.que .outcome,
+.que .comment,
+.que .history {padding: 0.0em;margin: 0 0 0.0em;  border-radius: 5px 5px 5px 5px !important;}
+.que .formulation {
+  background: none repeat scroll 0 0 transparent;  border-radius: 5px 5px 5px 5px !important;
+}
+.que .outcome {background: #fff3bf;}
+.que .comment {background: #e0ffe0;}
+.que .history {background: #eee;}
+.que .outcome {
+  background: none repeat scroll 0 0 #E9EFD0;
+  border: 1px solid #D0DBA0;
+
+  margin: 5px;
+  padding: 8px 10px 1px;
+}
+.que .ablock {
+  background: none repeat scroll 0 0 #E4F1FA;
+  border: 1px solid #BDDBF2;
+  border-radius: 5px 5px 5px 5px;
+  margin: 0.7em 0 0.3em;
+  padding: 25px;
+}
+.que .im-controls {margin-top: 0.5em;text-align: left;}
+.dir-rtl .que .im-controls {text-align: right;}
+
+.que .specificfeedback,
+.que .generalfeedback,
+.que .rightanswer,
+.que .im-feedback,
+.que .feedback,
+.que p {margin: 0 0 0.5em;}
+.que .qtext {
+  font-size: 1.2em;
+  font-style: italic;
+  line-height: 1.4em;
+  margin: 0;/*0 0.5em 1.5em;*/
+}
+/**/.que .correct {background: none;}
+.que .notanswered,
+.que .incorrect {background: none;}
+.que .partiallycorrect {background: none;}
+.que .validationerror {color: none;}
+.que .grading,
+.que .comment,
+.que .commentlink,
+.que .history {margin-top: 0.5em;}
+
+.que .history h3 {margin: 0 0 0.2em;font-size: 1em;}
+.que .history table {width: 100%;margin: 0;}
+.que .history .current {font-weight: bold;}
+
+.importerror {margin-top: 10px;border-bottom: 1px solid #555;}
+.mform .que.comment .fitemtitle {width: 20%;}
+
+#page-question-preview #techinfo {
+    margin: 1em 0;
+}
+form#responseform {
+  margin: -14px;
+}
+/** Overide for RTL layout **/
+.dir-rtl #qtypechoicecontainer #chooseqtype .instruction,
+.dir-rtl #qtypechoicecontainer #chooseqtype .qtypesummary {right: 60%;left: 0%; border-left:0;border-right: 1px solid grey;}
+#qtypechoicecontainer #chooseqtype .qtypeoption {padding-right: 0.3em;}
+
+div#mod_quiz_navblock {
+  border: medium none;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 500px;
+}
+div#mod_quiz_navblock div.header {
+  float: left;
+  width: 141px;
+}
+/*attempt.php*/
+.editquestion {
+    visibility: hidden;
+}

@@ -1,0 +1,130 @@
+ body {background-color: #fff;font: 13px/1.4 Verdana, "Lucida Grande", Lucida, sans-serif;max-width: 50em;margin: 4% 8%;}
+h1, h2, h3 {font-size: 100%;margin-top: 2em;}
+.session_title {font-weight: bold;}
+.standards_addressed {font-weight: bold;margin: 0;}
+
+/*************** @group nav */
+ul.nav {margin: 0 0 1em 0;padding: 0;}
+ul.nav li {display: inline-block;margin-right: .5em;padding-right: .5em;border-right: 1px solid #999;white-space:;font-size: 86%;}
+ul.nav li:last-child {border-right: none;}
+.current_page {font-weight: bold;}
+/*************** @end */
+
+a:link {color: #00618c;
+  text-decoration: none;
+}
+a:visited {color: #0D5A7D;}
+a[href="#top"] {text-align: right;display: block;}
+blockquote {font-style: italic;}
+p.cite {font-style: normal;text-align: right;padding-right: 8em;}
+cite {font-style: normal;padding-bottom: .1em;}
+sub, sup {height: 0;line-height: 1;vertical-align: baseline;position: relative;font-size: 70%;}
+sub { top: .5ex; }
+sup { bottom: 1ex; }
+#citations, #answers {display: none;}
+.copyright {border-top: 1px solid #999;color: #333;font-size: 86%;margin-top: 4em;padding-top: 2em;text-align: center;}
+.described_link {margin-bottom: 1em;}
+.described_link a:first-child {display: block;margin-bottom: 0;padding-bottom: 0;}
+.definition {display: none;position: absolute;z-index: 1;width: 24em;background-color: #fff5be;padding: 1em;margin-left: 1em;border: 2px solid #e2c371;text-align: left;-webkit-box-shadow: 2px 2px 4px rgba(0,0,0,0.3);-moz-box-shadow: 2px 2px 4px rgba(0,0,0,0.3);box-shadow: 2px 2px 4px rgba(0,0,0,0.3);-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;}
+.glossary,
+.source {border-bottom: 1px dotted #00618c;}
+.glossary:hover, cite.source:hover {cursor: default;}
+ol ul {list-style-type: disc;}
+dt {font-weight: bold;margin-top: 1.4em;}
+dd {margin-left: 0;}
+.ordered {margin-left: 4em;font-weight: normal;}
+.ordered dt {display: list-item;list-style-type: decimal;}
+.smileys,
+.smileys li {list-style-type: none;}
+.smileys span {display: inline-block;min-width: 2em;}
+table {border-collapse: collapse;width: 100%;font: inherit;}
+th, td {border: 1px solid #999;vertical-align: top;}
+th {background-color: #e6e6e6;padding: 0 1em;}
+td {padding: 1em;}
+td p {margin-top: 0;}
+table.checklist col:first-child {width: 66%;}
+table.checklist col:last-child {width: 34%;}
+table.checklist h3 {margin-top: auto;}
+table.rubric col {width: 26%;}
+table.rubric col:first-child {width: 22%;}
+table.rubric th {text-align: left;background-color: transparent;padding: 1em;}
+table.rubric ul, table.rubric ol {margin-left: 0;padding-left: 1.6em;}
+table.session_resources col:first-child {width: 80px;}
+table.session_resources td:first-child p {text-align: center;}
+table.session_resources h3 {margin-top: auto;}
+
+/*************** @group overview course icons */
+ul.course_icons {padding: 0;margin: 0;list-style-type: none;width: 100%;}
+ul.course_icons li {list-style-type: none;display: inline-block;width: 22%;height: 36px;margin: 0;padding: .2em .5em;}
+ul.course_icons li img {vertical-align: middle;}
+ul.course_icons li.resource_source {display: block;width: 100%;border: none;margin-bottom: 1em;padding: 0;vertical-align: middle;}
+ul.course_icons li.resource_source img {vertical-align: middle;}
+/*************** @end */
+
+.resources_list {border: 1px solid #999;border-top: none;padding-left: 78px;}
+h2 + .resources_list {border-top: 1px solid #999;}
+.resources_list h3 {border-left: 1px solid #999;margin: 0;padding: .5em;}
+.resources_list ul {list-style-type: none;padding: 0;margin: 0;border-left: 1px solid #999;}
+.resources_list li {padding: .5em;}
+.wordle {float: right;margin-left: 2em;border: 1px solid #ddd;padding: 4px;min-width: 160px;min-height: 120px;}
+.readings { background: url(http://www.learner.org/about/legal_policy.html) no-repeat 18px 12px; }
+.interactives { background: url(http://www.learner.org/about/legal_policy.html) no-repeat 22px 12px; }
+.videos { background: url(http://www.learner.org/about/legal_policy.html) no-repeat 22px 12px; }
+
+/*************** @group headings with category icons */
+.category_heading { display: inline; }
+ul.category_list {display: inline-block;padding: 0;margin: 0;vertical-align: text-bottom;}
+ul.category_list li {background-repeat: no-repeat;background-position: center bottom;display: inline-block;padding: 0;margin: 0;text-indent: -9999px;width: 41px;height: 36px;}
+li.audio_category { background-image: url(http://www.learner.org/about/legal_policy.html); }
+li.discussion_category { background-image: url(http://www.learner.org/about/legal_policy.html); }
+li.interactive_category { background-image: url(http://www.learner.org/about/legal_policy.html); }
+li.journal_category { background-image: url(images/icon_journal.gif); }
+li.paper_category { background-image: url(images/icon_paper.gif); }
+li.pbs_category { background-image: url(http://www.learner.org/about/legal_policy.html); }
+li.reading_category { background-image: url(http://www.learner.org/about/legal_policy.html); }
+li.survey_category { background-image: url(http://www.learner.org/about/legal_policy.html); }
+li.video_category { background-image: url(http://www.learner.org/about/legal_policy.html); }
+
+/*************** @end */
+.references,
+.resources,
+.additional_resources,
+.project_assignment {border-top: 1px solid #999;margin-top: 2em;}
+.references h2,
+.resources h2,
+.additional_resources h2,
+.project_assignment h2 {margin-top: 1.6em;}
+.references p {text-indent: -4em;padding-left: 4em;}
+
+/*************** @group prompt boxes */
+.assignment_prompt {border: 1px solid #999;width: 100%;}
+.assignment_prompt * {padding: 0 1em;}
+.discussion_prompt ul,
+.journal_prompt ul {padding-left: 1.5em;padding-bottom: 1em;margin-left: 0;}
+.blog_prompt,
+.differentiated_prompt,
+.discussion_prompt,
+.journal_prompt,
+.community_prompt,
+.optional_prompt,
+.tech_prompt/*,
+ #mi1:hover*/ {padding: .6em 2em;margin: 2em;border-radius: 6px;}
+.blog_prompt {border: 1px solid #4b6846;background: #8cd97d;}
+.differentiated_prompt {border: 1px solid #D0D29E;background-color: #FCFCD5;}
+.journal_prompt {
+  background: none repeat scroll 0 0 #BFEBFF;
+  border: 1px solid #7196AD;
+}
+.discussion_prompt {
+  background: none repeat scroll 0 0 #D7D7D7;
+  border: 1px solid #9A9A9A;
+}.community_prompt {border: 1px solid #48617f;background-color: #97bbe5;padding-top: 1em;}
+.tech_prompt,
+.optional_prompt {background-color: #EDEDED;border: 1px solid #D0D0D0;}
+
+/*************** @end */
+.de-em {font-weight: normal;}
+.note {font-style: italic;}
+.inline_separator {clear: right;padding-top: 1em;}
+.session_image {float: right;margin: 0 0 0 2em;padding: 0;}
+.session_image img {border: 1px solid #666;margin: 0;padding: 0;}

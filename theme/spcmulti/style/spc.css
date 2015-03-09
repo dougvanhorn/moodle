@@ -1,0 +1,1100 @@
+
+/*@import url(http://fonts.googleapis.com/css?family=Signika+Negative:300,400,600);
+
+@import url(http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911);
+@import url(http://fonts.googleapis.com/css?family=Enriqueta);
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,300,700);
+
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=Bree+Serif:400,400italic);
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);*/
+
+body.pagelayout-incourse h2 {
+  color: #355167;
+  /*font-size: 1em !important;
+  line-height: 1.4em !important;*/
+}
+.informationitem .info {
+  position: absolute;
+  visibility: hidden;
+}
+.debuginfo {
+  background: none repeat scroll 0 0 white;
+  clear: both;
+  overflow: hidden;
+  white-space: pre;
+  width: 100%;
+}
+.certificate_requirement_prompt  {
+  position: absolute;
+  visibility: hidden;
+}
+ .modified {
+  position: absolute;
+  visibility: hidden;
+}
+body[class*="localhost"] div.logininfo, body[class*="staging"] div.logininfo {
+  background: none repeat scroll 0 0 white;
+  font-size: 14px;
+  margin: 0 12px;
+  max-width: 400px;
+  padding: 5px 12px; 
+} 
+html, body, form, fieldset, ul, ol, li, div, legend, label, br, button, textarea, input, select {
+  color: #262626;
+  font-family: 'Open Sans',Verdana,Arial,sans-serif !important;
+  font-size: 0.92rem;
+  font-weight: 300;
+  line-height: 1.64rem;
+   letter-spacing: 0.015em;
+}
+ html {
+   background-color: #358FC4;
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+p {
+  margin-bottom: 1rem;
+}
+a {
+  color: #2372B4;
+}a:visited {
+  color: #2372B4;
+}
+.path-mod-url .resourcecontent{height:1000px}
+#region-main .region-content {
+
+}
+#p($PAGE-bodyid); {}
+.p($PAGE-bodyclasses); {}
+#page {
+  background: url([[pix:theme|SPCHeadBack]]) repeat-x scroll center 0 #358FC4;
+  padding: 10px 0 40px;
+  /*height: 100%;*/
+}
+#page-content #region-pre {
+    display: table-cell;
+    padding: 0;
+    vertical-align: top;
+}
+.glossary, .source {
+  border-bottom: 1px dotted #3E89F1;
+  color: #4B4C4D !important;
+  font-weight: 300;
+  text-decoration: none;
+}
+a.glossary:hover, a.source:hover {
+  background: none repeat scroll 0 0 #E3EFF8;
+  border: 1px dotted #ACC8D5;
+  border-radius: 5px 5px 5px 5px;
+  color: #5D6E7D !important;
+  font-weight: 200;
+  text-decoration: none;
+  margin: 0 -1px;
+}
+#PBSTeacherline.powered-by{ 
+ background: url([[pix:theme|powered-by-teacherline_logo-stacked]])  
+ no-repeat scroll 1px -4px transparent;
+  clear: both;
+  color: #CFCFCF;
+  display: block;
+  float: right;
+  font: 0px/0px verdana;
+  height: 40px;
+  margin: 0 0 6px;
+  padding: 0 12px 0 0;
+  width: 130px;
+}
+#page-header {
+  float: none;
+  margin: 0 auto;
+  width: 926px;
+}
+#headerbox{
+   margin: 10px auto 0;
+   padding: 0;
+   width: 956px;
+   position:relative;
+
+}
+#page-branding {
+  
+  display: table;
+  width: 956px;
+}
+
+
+.cobrand-logo {
+  display: table-cell;
+  padding: 15px;
+}
+.brand-logo {
+  display: table-cell;
+  vertical-align: bottom;
+}
+.cobrand-text {
+  display: inline-block;
+  float: right;
+}
+#asides {
+  color: #497493;
+  font-size: 10px;
+  margin: 1em auto;
+  padding: 9em 0 0 7px;
+  text-align: left;
+}
+#asides > a {
+  color: inherit;
+  padding: 0.5em;
+  text-decoration: none;
+}
+/*#pageheading.main {
+  font-size: 1.5em;
+  margin: 0.75em 0 0;
+  padding: 0;
+}
+#pagecontent > p {
+  text-align: justify;
+}*/
+#pagecontent {
+  outline: 1px solid red;
+}
+/*.section.img-text {
+  position: absolute;
+  visibility: hidden;
+}
+li#section-1, li#section-2 {
+  height: 1px;
+  overflow: hidden;
+
+  position: absolute;
+  visibility: hidden;
+}*/
+.modified {
+  color: #9FB7C4;
+  font-size: 0.7em;
+  font-style: italic;
+  margin: 16em 0 0;
+}
+.shdw {
+    /*box-shadow: 0 2px 5px #666666;*/
+}
+.shdw-dn {
+  /*box-shadow: 0 5px 5px #666666;*/
+}
+.rnd {
+    border-radius: 3px 3px 3px 3px;
+}
+#maincontainer {
+  background-color: #FFFFFF;
+  clear: both;
+  margin: 10px auto 20px;
+  overflow: visible;
+  padding: 15px;
+  position: relative;
+  width: 926px;
+}
+#pagecontent {
+  margin: 1em 0;
+  max-width: 635px;
+}
+
+div.side-pre-content {
+  /*position: relative;
+  top: 15px;*/
+}
+
+.generalbox {/*  FROM moodle\mod\wiki\styles.css   */
+  margin-top: 10px;
+  padding: 5px 0;
+}
+/*#intro.generalbox {
+  margin-top: 10px;
+  padding: 5px 0;
+}
+*/
+.que.multichoice .answer .specificfeedback {
+  background: none repeat scroll 0 0 transparent;
+  font-weight: bold;
+}
+/* shared button attributes 
+
+*/
+ .moodle-dialogue-confirm .confirmation-dialogue input,
+.button, input[type="submit"],
+.buttonsmall,
+ div#mod_quiz_navblock div.singlebutton  input[type="submit"],
+ div.region-content > .submitbtns a.arrow_link,
+.submitbtns > a,
+div.ft span.button-group  button[type="button"]
+ {
+
+
+
+
+    background: none repeat scroll 0 0 #AECDE5;
+    border-bottom: 1px solid #A4C0D3 !important;
+    display: inline-block;
+    font-family: arial;
+
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #CFDAE7;
+}
+.moodle-dialogue-confirm .confirmation-dialogue input:hover ,
+.button:hover ,
+.buttonsmall:hover,
+div#mod_quiz_navblock div.singlebutton input[type="submit"]:hover ,
+div.region-content > .submitbtns a.arrow_link:hover,
+.submitbtns > a:hover,
+input[type="submit"]:hover,
+div.ft span.button-group  button[type="button"]:hover{
+  /*background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #2f72b5), color-stop(1, #67b4eb) );
+  background:-moz-linear-gradient( center top, #2f72b5 5%, #67b4eb 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2f72b5', endColorstr='#67b4eb');*/
+  background-color: #84A9C6;
+  cursor:pointer;
+}
+.moodle-dialogue-confirm .confirmation-dialogue input:active;
+.button:active,
+.buttonsmall:active,div#mod_quiz_navblock div.singlebutton input[type="submit"]:active  ,
+div.region-content > .submitbtns a.arrow_link:active,
+.submitbtns > a:active,
+div.ft span.button-group  button[type="button"]:active{
+  position:relative;
+  top:1px;
+}
+/* large button specific attributes  */
+
+.moodle-dialogue-confirm .confirmation-dialogue input,
+.button, input[type="submit"] ,
+div.region-content > .submitbtns a.arrow_link,
+.submitbtns > a{
+  -moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+  box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+  
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+  
+  border:none/*3px solid #ffffff*/;
+  
+  color: #173A56;
+  font-size:1em;
+  padding:2px 8px;
+  
+  margin: 0.5em;
+}
+div#mod_quiz_navblock {
+  display: none;
+}
+ 
+/* small button specific attributes  */
+.smallbutton, div#mod_quiz_navblock div.singlebutton input[type="submit"] ,
+div.ft span.button-group  button[type="button"]{
+  -moz-box-shadow:inset 0px 0px 0px 0px #bbdaf7;
+  -webkit-box-shadow:inset 0px 0px 0px 0px #bbdaf7;
+  box-shadow:inset 0px 0px 0px 0px #bbdaf7;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+  border:1px solid #ffffff;
+  color:#ffffff;
+  font-size:11px;
+  padding:3px 3px;
+}
+
+div#mod_quiz_navblock div.singlebutton input[type="submit"]{
+}
+.othernav {
+  clear: none !important;
+  float: right;
+  font-size: 0.8em;
+  line-height: 0.6em;
+  margin: 0 !important;
+  width: 244px;
+}
+a.qnbutton {
+  text-decoration: none !important;
+}
+.qnbutton {
+  border-radius: 3px 3px 3px 3px;
+}
+.endtestlink {
+  float: left;
+  margin: 1px !important;
+}
+/*#emp_free_landing_page h1, h2, h4, h5, h6, p, pre, blockquote, label, dl, fieldset, address, li, dd, fieldset, img, p, div {
+//  font-family: inherit !important;
+//  margin: 0;
+}*/
+#region-main-wrap h1 {
+  color: #A6A6A6;
+  font-size: 2.5em;
+  font-weight: 100;
+  line-height: 1.2em;
+  margin: 0.8em 25px 0.5em 0;
+}
+dd {
+    margin-left: 0 !important;
+}
+dl.figure > dd {
+  margin-left: 0;
+  margin-right: 48px;
+}
+.figure > dt {
+  background: none no-repeat scroll 0 0 white;
+  font-weight: normal;
+  margin: 0;
+  min-height: 100px;
+  overflow: hidden;  min-height: 12px;
+}
+dl.figure {
+      background: url("[[pix:theme|icon_enlarge]])") no-repeat scroll right bottom white;
+    padding: 5px;
+    position: relative;
+    width: 200px;
+    border: 1px solid #A8C4CF !important;/*box-shadow: 0 0 3px #232020;*/
+    cursor: pointer;
+  z-index:2;
+    padding-bottom: 20px !important;
+}
+
+dl.coursemain > dd {
+  color: #122E45 !important;
+  font-size: 0.8em !important;
+  font-weight: normal !important;
+  line-height: 1.6em !important;
+  margin-left: 0;
+}
+.coursemain > dt {
+}
+dl.coursemain {
+  border: 1px solid #84B6F1;
+  border-radius: 3px 3px 3px 3px;
+  margin: 0;
+  padding: 4px !important;
+  position: relative;
+}
+
+
+dl.figure > dt > img.zoom {
+    border-radius: 2px 2px 2px 2px;
+    width: 100%;
+}
+img.overview {
+  margin-bottom: -2px;
+  width: 620px;
+}
+dl.left,img.left{
+    float: left;
+    left: 1px;
+    margin: 6px 1.3em 1em 0;
+    padding: 5px;
+    position: relative;
+    border: 1px solid silver ;
+    border-radius: 4px 4px 4px 4px !important;
+}
+dl.right,img.right {
+    float: right;
+    right: 1px;
+    margin: 6px 0 1em 1.3em;
+    padding: 5px;
+    position: relative;
+    border: 1px solid silver ;
+    border-radius: 4px 4px 4px 4px !important;
+}
+div#region-main-wrap ul, div#region-main-wrap ol {
+  list-style: square outside none;
+  margin-left: 1em;
+}
+div#region-main-wrap ul li, div#region-main-wrap ol li {
+  left: 1em;
+  padding-right: 1em;
+  position: relative;
+  z-index: 1;
+}
+
+.moodle-dialogue-base .moodle-dialogue-wrap {
+  border-radius: 7px 7px 7px 7px;
+  border: 2px solid #83ABBB;
+}
+
+.moodle-dialogue-base .moodle-dialogue-hd {
+  background-color: #83ABBB;
+  color: #FCFDFF;
+  font-size: 1.5em;
+  font-weight: 100;
+}
+/*dl.QandA {
+  clear: both;
+  margin: 0 0 2em;
+  padding: 0;
+}
+dl.QandA > dt {
+  background-color: #DDEAF5;
+  border-left: 1px solid #9AAAB7;
+  border-radius: 5px 5px 0 0;
+  border-right: 1px solid #9AAAB7;
+  border-top: 1px solid #9AAAB7;
+  font-weight: 200;
+  margin: 0;
+  padding: 0.5em 1em;
+}
+dl.QandA > dd {
+  background-color: #E7EDF1;
+  border: 1px solid #9AAAB7;
+  border-radius: 0 0 5px 5px;
+  margin-bottom: 1em;
+  padding: 0.5em 1em 1em;
+}*/
+object#resourceobject {
+  height: 100% !important;
+  width: 100% !important;
+}
+/*tables forum*/
+.path-mod-forum .forumheaderlist {
+  border-style: none;
+}
+table.forumheaderlist th.header {
+  text-align: left;
+}
+table.forumheaderlist .replies {
+  text-align: center;
+}
+table.forumheaderlist td {
+  vertical-align: bottom;
+}
+.path-mod-forum .forumheaderlist .discussion .starter {
+  vertical-align: bottom !important;
+}
+.path-mod-forum .forumheaderlist td.picture, th.author {
+  visibility: hidden;
+}
+
+
+
+
+.path-mod-forum .forumheaderlist td {
+  border-style: none;
+}
+.no-overflow img {
+  /*border: 1px solid #C7C7C7;*/
+}
+a:visited{color:#00618C !important;}
+
+
+.TopArticle h1 {
+  border: medium none;
+  font-size: 2em !important;
+}
+.right {
+  float: right;
+}
+
+ .headermain{float:none;}
+ .moodlelogo{display:none;}
+.logininfo {
+    color: #1E83CB;
+    font-size: 1px;
+    left: 0;
+    /*position: absolute;*/
+    top: 0;
+}
+.logininfo, .logininfo > a {
+    color: #1E83CB !important;
+}
+#page-wrap {
+  xclear: both;
+  display: table;   
+  xwidth: 100%;
+}
+/*#page-content {
+  clear: both;
+  display: table-row;
+  float: none;
+  min-width: 0;
+  overflow: visible;
+  position: inherit;
+  width: auto;
+}*/
+#region-pre {
+  background-color: #D2E5F4;
+  display: table-cell;
+  float: none !important;
+  left: 0 !important;
+  margin-left: auto !important;
+  overflow: visible !important;
+  position: inherit !important;
+  width: 220px !important;
+}
+#region-main-wrap {
+  background-color: #FEFEFE;
+  display: table-cell;
+  position: inherit !important;
+  right: 0 !important;
+  width: 702px;
+}
+#region-main .region-content {
+/*  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+  line-height: 1.4em;*/
+}
+
+#region-main > h1.headermain {
+  border-bottom: 1px solid #BAC8D3;
+  color: #5A6F80;
+  font-size: 1em;
+  margin: 0;
+  padding: 0 0 1em;
+
+  text-align: right;
+
+}
+
+#region-main-wrap > #region-main {
+  margin: 0 25px 45px 45px;
+}
+.mod_introbox {
+  border: medium none;
+  font-style: italic;
+  padding: 10px;
+}
+.block .content {
+  padding: 0;
+}
+.block_spc_menu.block.list_block {
+  border: medium none;
+  margin: 0;
+  padding: 0;
+}
+.block_spc_menu div.header {
+  display: none;
+}
+
+
+
+
+
+.block_site_main_menu {
+  border: medium none;
+}
+.block-hider-hide {
+  visibility: hidden;
+}
+
+.mod_introbox {
+  border: medium none;
+  padding: 10px;
+}
+.block_settings.block {
+  border: medium none;
+}
+.generalbox {
+  border: medium none;
+}
+.headermenu{}
+ 
+.navbar 
+.breadcrumb{}
+.navbutton{}
+/*#page-content {
+  background: url("/moodle/theme/image.php?theme=spc&component=theme&image=leftmenu_back") repeat-y scroll 0 0 #9DC9EB;
+}*/
+#region-main-box{}
+#region-post-box{}
+
+.clearfix{clear: both;}
+.helplink{} 
+/**
+ * Custom menu
+ */
+ div#custom_menu{}
+div.spc-menu .spc-menu-horizontal{}
+div.spc-menu-content{}
+
+a.spc-menu-label{}
+div#cm_submenu_1{}
+div.spc-menu .custom_menu_submenu{}
+div.spc-menu-content{}
+ul
+li.spc-menuitem{}
+a.spc-menuitem-content{}
+ /*    url([[pix:theme|topnav_bookend]])/moodle/theme/image.php?theme=spc&component=theme&image=header"*/
+#custommenu {
+  /*background:url([[pix:theme|topnav_bookend]]) no-repeat;
+  clear: none;
+  float: right;
+  margin: 0;
+  padding: 0;*/
+  position:absolute;
+  right:0;
+  display: none;
+}
+.IconSPC {
+  display: inline-block;
+  font-size: 10pt;
+  font-style: italic;
+  height: 53px;
+  margin: 0 0 10px 4px;
+  position: relative;
+  text-indent: 0;
+  top: 0px;
+  width: 62px;
+  float: left;
+}
+.certificate_requirement_prompt {
+         background: url("[[pix:theme|icon_certificate]]") 
+         no-repeat scroll 539px 10px #E1EEF7;}
+.certificate_requirement_prompt {
+  border: 1px solid #8AB3CE;
+  padding-right: 5em !important;
+  text-align: justify;
+}
+.Certificate  {background: url("[[pix:theme|icon_certificate]]") no-repeat scroll 0 0 transparent;}
+.Badge          {background: url("[[pix:theme|icon_badge]]") no-repeat scroll 0 0 transparent;}
+/*.Lobjective     {background: url("[[pix:theme|icon_lobjective]]") }*/
+.Lobjective {
+  background: none no-repeat scroll 0 9px #EBF2F4;
+  border: 1px solid lightblue;
+  border-radius: 5px 5px 5px 5px;
+  color: #355167;
+  font: 300 1em/1.4em 'open sans' !important;
+  margin: 0 0 25px;
+  padding: 25px;
+}
+.learning_objective_title {
+  font-weight: bold;
+  margin: -0.2em 0 0.3em -1em;
+}
+.learning_objective_title:before {
+    content:'\00bb \00a0';
+  vertical-align: 1px;
+}
+div.certificate_requirement_prompt h3 {
+  color: #4281B2;
+  font-size: 1.1em;
+  margin: 5px 0 10px;
+}
+div.figure > img.figure {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+div.figure {
+  background: none repeat scroll 0 0 transparent !important;
+}
+
+.figure > dd {
+  font-size: 0.8em;
+  line-height: 1.3em;
+  margin: 0 0 -10px;
+}
+li.modtype_label {
+  outline: 1px dotted silver;
+  overflow: auto;
+  padding: 5px !important;
+  width: 440px;
+}
+.topArticle h1 {
+  font-size: 2em !important;
+}
+div.region-content > h2.main:nth-child(2) {
+  color: gray;
+  font-size: 2.2em;
+  font-weight: 100;
+  margin: 1em 0 1em 0px;
+  position: relative !important;
+  visibility: visible !important;
+}
+/*YUI =======*/
+.yui3-panel {
+  z-index: 10 !important;
+}
+.yui3-skin-sam .yui3-panel .yui3-widget-hd {
+  background: none repeat scroll 0 0 transparent!important;
+}
+.yui3-skin-sam .yui3-panel-content {
+  border: 3px solid white !important;
+  border-radius: 5px 5px 5px 5px;
+}
+/*YUI END =======*/
+form#mform1 textarea#id_introeditor {
+  height:20px;
+}
+form#mform1 textarea#id_page {
+  font: 0.8em/1.4em monospace !important;
+  overflow: scroll !important;
+  width: 520px;
+}
+/*custommenu is now used for the USER's NAME on the top right*/
+#custommenu ul {
+  background-color: #114E74;
+  border-bottom: 1px solid #8FB8D5;
+  border-radius: 0 3px 0 3px;
+  color: White;
+  float: left;
+  font-family: arial,helvetica,sans-serif;
+  margin: 0;
+  padding-left: 0;
+  min-width: 130px;
+}
+
+#custommenu ul li { display: inline; height:21px}
+
+#custommenu ul li a {
+  color: White;
+  float: left;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  line-height: 14px;
+  margin: 0;
+  padding: 4px 20px 3px;
+  text-decoration: none;
+}
+
+#custommenu ul li a:hover
+{
+background-color: #369;
+color: #fff;
+}
+
+
+.spc-menuitem-content {
+  color: #D2E1E6;
+  font-size: 0.8em;
+  padding: 0 1em;
+}
+
+div #extrasmenu_container {
+  font-size: 0.7em;
+  margin: 20em 0 0;
+}
+#extrasmenu {
+  border-top: 1px solid #B7CFD7;
+  margin-left: 0;
+  padding-left: 0;
+  width: 200px;
+}
+
+#extrasmenu li {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0.25em;
+  text-align: right;
+}
+
+#extrasmenu li a {
+  font-size: 0.85em;
+  text-decoration: none;
+}
+body.path-mod-quiz .state {
+  visibility: hidden;
+}
+div.tl_byline {
+  margin: 1em auto;
+  text-align: center;
+  width: 900px;
+}
+div.tl_byline > a, div.tl_byline {
+  color: white !important;
+  text-decoration: none;
+}
+.tlref {
+  display: block;
+  font-size: 8px;
+  margin: -1em 0;
+}
+/* MENU AND MENU PROGRESS TRACKER ============================*/
+#spcmenu_container {  }
+ul#spcmenu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#spcmenu li{}
+#spcmenu  li.current{
+  background: url("[[pix:theme|activepage_tab]]") 
+  no-repeat scroll 100% 0% #AECDE5;
+}
+#spcmenu li:hover {
+  background-color: #81B4D3;
+}
+#spcmenu a {
+    border-bottom: 1px solid #D0E2EF;
+    border-top: 1px solid #D9EBF9;
+    display: block;
+    font: 300 1em/1.45em 'Open Sans',Verdana,Arial,sans-serif !important;
+    max-width:100%;
+    padding: 0.8em 38px 0.8em 24px;
+    text-decoration: none;
+}
+#spcmenu a:visited{color: red ;text-decoration: none;}
+
+/*a:visited {  background: url("[[pix:theme|doctype_page]]") no-repeat scroll 1px 50%  transparent;}*/
+#spcmenu li > span a.progress_alert{background-image: url("[[pix:theme|progress_alert]]") }
+#spcmenu li > span a.progress_pass {background-image: url("[[pix:theme|progress_pass]]") }
+#spcmenu li > span a.progress_none {background-image: url("[[pix:theme|progress_none]]")}
+
+#spcmenu li > span a.not_viewed:visited{background-image: url("[[pix:theme|prog_1_pass]]") }
+#spcmenu li > span a{
+    background-position: 179px 0.9em;
+    background-repeat: no-repeat;
+}
+a.fail, span.fail {  background: url("[[pix:theme|progress_fail]]") no-repeat scroll 174px 50%  transparent;}
+a.pass, span.pass {  background: url("[[pix:theme|progress_pass]]") no-repeat scroll 174px 50% transparent;}
+#spcmenu li > span.page {background-image: url("[[pix:theme|doctype_page]]") }
+#spcmenu li > span.quiz {background-image: url("[[pix:theme|doctype_quiz]]") }
+#spcmenu li > span.cert {background-image: url("[[pix:theme|doctype_cert]]") }
+#spcmenu li > span.spcnotebook {background-image: url("[[pix:theme|doctype_spcnotebook]]") }
+#spcmenu li > span.cert_earned {background-image: url("[[pix:theme|doctype_cert_earned]]") }
+#spcmenu li > span.home {background-image: url("[[pix:theme|doctype_home]]") }
+
+#spcmenu li > span{
+    background-position: 3px 0.83em;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    display: block;
+    width: 100%;
+}
+/*TOOLTIP ==============================================================*/
+#tooltip
+{
+display:none;
+}
+ 
+ 
+/*end TOOLTIP==============================================*/
+
+.cert-row{display:none;}
+/*YUI*/
+
+.yui-panel-container.yui-dialog.yui-simple-dialog {
+  background: none repeat scroll 0 0 #D2E5F4;
+  border: 5px solid white;
+  border-radius: 13px 13px 13px 13px;
+  overflow: hidden;
+}
+.yui-module.yui-overlay.yui-panel {
+  border: medium none;
+}.yui-skin-sam .yui-panel .hd {
+  border: 0 none;
+}.yui-skin-sam .yui-panel .bd {
+  border-left: medium none;
+  border-right: medium none;
+  border-top: 3px solid white;
+}.yui-skin-sam .yui-dialog .ft {
+  border: 0 none;
+}.yui-skin-sam .yui-panel .bd,
+ .yui-skin-sam .yui-dialog .ft  {
+  background: none repeat scroll 0 0 transparent;}
+/*************** @group prompt boxes */
+.assignment_prompt {border: 1px solid #999;width: 100%;}
+.assignment_prompt * {padding: 0 1em;}
+.discussion_prompt ul,
+.journal_prompt ul {padding-left: 1.5em;padding-bottom: 1em;margin-left: 0;}
+.blog_prompt,
+.certificate_requirement_prompt,
+.differentiated_prompt,
+.discussion_prompt,
+.journal_prompt,
+.community_prompt,
+.optional_prompt,
+.tech_prompt {padding: 0.2em 2em;margin: 0 0 1em;border-radius: 6px;font-size: 1.1em;}
+.blog_prompt {border: 2px solid #4b6846;background: #8cd97d;}
+.differentiated_prompt {border: 2px solid #717237;background-color: #feff7f;}
+.discussion_prompt {border: 2px solid #CCCCCC;background: #dedede;}
+
+.journal_prompt {
+  background: none repeat scroll 0 0 #F1E9CB;
+  border: 1px solid #D5B78A;
+  clear: both;
+}
+.community_prompt {border: 2px solid #48617f;background-color: #97bbe5;padding-top: 1em;}
+.tech_prompt,
+.optional_prompt {background-color: #fff;border: 2px solid #666;}
+
+.journal_prompt > p {
+  color: #4F3434;
+  font-size: 0.9em;
+  margin: 1em 0 !important;
+}
+
+/*************** @end */
+
+.block {
+  background: none repeat scroll 0 0 #C6E0F2;
+  border: medium none;
+  margin: 0;
+  padding: 15px;
+}
+.quizattemptcounts {
+  clear: left;
+  display: none;
+  position: absolute;
+  text-align: center;
+}
+/************************* course specific */
+.Icon {
+  display: inline-block;
+  font-size: 10pt;
+  font-style: italic;
+  height: 34px;
+  margin: 0 0 0 4px;
+  position: relative;
+  text-indent: 0;
+  top: -8px;
+  width: 42px;
+}
+
+.Discussion  {background: url("[[pix:theme|icon_discussion]]") no-repeat scroll 0 0 transparent;}
+.Interactive{background: url("[[pix:theme|icon_interactive]]") no-repeat scroll 0 0 transparent;}
+.Journal  {background: url("[[pix:theme|icon_journal]]") no-repeat scroll 0 0 transparent;}
+.Paper    {background: url("[[pix:theme|icon_paper]]") no-repeat scroll 0 0 transparent;}
+.Reading  {background: url("[[pix:theme|icon_reading]]") no-repeat scroll 0 0 transparent;}
+.Survey    {background: url("[[pix:theme|icon_survey]]") no-repeat scroll 0 0 transparent;}
+.Video    {background: url("[[pix:theme|icon_video]]") no-repeat scroll 0 0 transparent;}
+.Audio    {background: url("[[pix:theme|icon_audio]]") no-repeat scroll 0 0 transparent;}
+.PBSicon  {background: url("[[pix:theme|icon_pbs]]") no-repeat scroll 0 0 transparent;}
+.NASAicon  {background: url("[[pix:theme|icon_nasa]]") no-repeat scroll 0 0 transparent;}
+
+.popup {
+  background: url("[[pix:theme|extlink1]]") no-repeat scroll 100% 4px transparent;
+  margin: 0 0 0 -2px;
+  padding: 0 12px 0 2px;
+  border-bottom: 1px solid #C3E0E6;
+  text-decoration: none;
+}
+a.popup:hover {
+    background-color: #C9E4ED;
+}
+.popup:hover {
+  background-color: #EAF2F5;
+}
+.availabilityinfo {
+  background-color: #FBEAA7;
+  border: 1px solid #FFD300;
+  padding: 0 0 0 1em;
+}
+.prntbutton {
+  float: right;
+}
+/* == SUPRESS MOODLES' TOPICS/PROGRESS ICONS DISPLAY ON OVERVIEW PAGE (page-course-view-topics)============
+
+body#page-course-view-topics ul.topics ul.section.img-text {
+  display: none;
+}
+body#page-course-view-topics ul.topics .section.main {
+  left: 0 !important;
+}
+body#page-course-view-topics ul.topics {
+  margin: 0;
+}
+body#page-course-view-topics ul.topics {
+  margin: 0;
+}
+body#page-course-view-topics ul.topics .section.main {
+  left: 0 !important;
+}
+body#page-course-view-topics ul.topics .left.side {
+  display: none;
+}
+body#page-course-view-topics ul.topics .right.side {
+  display: none;
+}
+.path-course-view .completionprogress {
+  display: none!important;
+}
+body#page-course-view-topics .course-content ul.topics li.section .content {
+  margin: 0px;
+}
+body.pagelayout-incourse h2, body#page-course-view-topics h2 {
+  color: #355167;
+}
+body#page-course-view-topics h3 {
+  color: grey;
+  font-size: 2.8em;
+  font-weight: 100;
+  line-height: 1.2em;
+  margin: 0.8em 25px 0.5em 0;
+}*/
+/*feedback---------------------------------*/
+body#page-mod-feedback-view.path-mod      div.text_to_html a img.smallicon {
+  display: none;
+}
+body#page-mod-feedback-view.path-mod      div.text_to_html > a {
+  display: none;
+}
+body#page-mod-feedback-view.path-mod      h2.main div.text_to_html {
+  color: inherit;
+  font: inherit;
+}
+body#page-mod-feedback-view.path-mod      .box.generalbox.boxaligncenter.boxwidthwide {
+  margin: 0 !important;
+}
+/* html errors: red font or borders to highlight common html coding mistakes===============*/
+h2 > dl.coursemain > dd {
+  color: red !important;
+}
+/*-----NOTEBOOK-----------------------------------------------------*/
+body#page-mod-spcnotebook-edit select#menutextformat {
+  display: none;
+}
+body#page-mod-spcnotebook-edit .fitemtitle {
+  display: none;
+}
+body#page-mod-spcnotebook-edit .felement.feditor {
+  left: 0;
+  margin: 0 !important;
+  padding: 0;
+  position: relative;
+  width: 100% !important;
+}
+body#page-mod-spcnotebook-edit .mform fieldset div {
+  margin: 0;
+}
+
+body#page-mod-spcnotebook-edit .felement.feditor div div:nth-child(1) {
+  background: url("[[pix:theme|notebookback]]") repeat scroll 0 0 transparent;
+  padding: 23px 0 0px 30px;
+  border: 1px solid grey;
+  border-radius: 3px 3px 3px 3px;
+}
+body#page-mod-spcnotebook-edit div.feditor div div textarea {
+  background: none repeat scroll 0 0 transparent;
+  border: medium none;
+  font: 16px/20px bold Courier New,Courier,monospace !important;
+  height: 354px;
+  width: 100%;
+}
+body#page-mod-spcnotebook-edit .felement.feditor div div:nth-child(2) {
+  background: none ;
+  border: none;
+  padding:  0px;
+}
+body#page-mod-spcnotebook-edit .fdescription.required {
+  display: none;
+}
+body#page-mod-spcnotebook-edit div#fgroup_id_buttonar fieldset.felement.fgroup {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+body#page-mod-spcnotebook-edit div#fgroup_id_buttonar fieldset.felement.fgroup input#id_submitbutton {
+  margin-left: 0;
+}
+
+/*ADMIN CSS--------------------------*/
+
+body#page-mod-quiz-mod fieldset#timing,
+body#page-mod-quiz-mod fieldset#modstandardgrade,
+body#page-mod-quiz-mod fieldset#layouthdr,
+body#page-mod-quiz-mod fieldset#display,
+body#page-mod-quiz-mod fieldset#security,
+body#page-mod-quiz-mod fieldset#overallfeedbackhdr,
+body#page-mod-quiz-mod fieldset#interactionhdr,
+body#page-mod-quiz-mod fieldset#availabilityconditionsheader,
+body#page-mod-quiz-mod fieldset#modstandardelshdr {
+  display: none;
+}
