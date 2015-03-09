@@ -25,8 +25,8 @@ empty-cells:show; margin: .75em; }
 -------------------------------------------------------------------------------*/
 .BookTitle{font-style: italic;}
 .checklist h2 {
-	font-size: 0.8em;
-	margin: 0.4em 0 1em;
+  font-size: 0.8em;
+  margin: 0.4em 0 1em;
 }
 #main_illustration {
   width:         250px;
@@ -55,22 +55,22 @@ empty-cells:show; margin: .75em; }
 }*/
 .rubric thead {background: none repeat scroll 0 0 #E4E4E4;}
 .tlSessionPart {
-	border-top: 1px solid #CFCFCF;
-	margin-top: 3rem;
-	padding: 2rem 0;
+  border-top: 1px solid #CFCFCF;
+  margin-top: 3rem;
+  padding: 2rem 0;
 }
 .rubric td li {
-	margin: 1rem 0 0 -10px;
+  margin: 1rem 0 0 -10px;
 }
 table.rubric td h2 {
-	margin: 0;
+  margin: 0;
 }
 td h2 {
-	font-size: 0.8em;
-	margin: 0.5em 0;
+  font-size: 0.8em;
+  margin: 0.5em 0;
 }
 td:first-child {
-	width: 120px;
+  width: 120px;
 }
 td{
 padding: 0.5em!important;
@@ -78,36 +78,36 @@ padding: 0.5em!important;
 li,p,blockquote,em,cite{font-size: 1em;}
 li{}
 ul {
-	list-style-type: disc;
+  list-style-type: disc;
 }
 ol ul li {
-	margin-left: -10px;
+  margin-left: -10px;
 }
 .img_left {
-	border: 0 none;
-	float: left;
-	margin: 0 12px 0 0;
-	padding: 0;
+  border: 0 none;
+  float: left;
+  margin: 0 12px 0 0;
+  padding: 0;
 }
 blockquote{}
 blockquote.simpleindent {
-	font-style: normal;
+  font-style: normal;
 }
 
 .Menu {
-	color: #0066CC;
+  color: #0066CC;
 }
 
 #pagecontent{max-width:600px; margin: 1em auto; min-height: 800px;}
 h1{
-	font-weight: bold!important;
-	font-size: 14px!important;
+  font-weight: bold!important;
+  font-size: 14px!important;
 }
 
 blockquote li {
-	margin: 0;
-	padding-bottom: 0;
-	padding-top: 0;
+  margin: 0;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 /* Edit Aids
 -------------------------------------------------------------------------------*/
@@ -127,7 +127,7 @@ a.popup:hover {
     background-color: #C9E4ED;
 }
 .clear {
-	clear: both;
+  clear: both;
 }.popup:hover {
   background-color: #EAF2F5;
 }
@@ -142,41 +142,41 @@ h4 {
   padding: 0 0 0.3em;
 }
 p.backtotop {
-	text-align: right;
-	width: 100%;
+  text-align: right;
+  width: 100%;
 }
 span.backtotop {
-	font-weight: normal;
-	float: right;
+  font-weight: normal;
+  float: right;
 }
 td > ul li {
-	background: url("img/bullet.png") no-repeat scroll 0 6px transparent;
-	list-style: none inside none;
-	margin: 1em 0 0 -39px;
-	padding: 0 0 0 8px;
+  background: url("img/bullet.png") no-repeat scroll 0 6px transparent;
+  list-style: none inside none;
+  margin: 1em 0 0 -39px;
+  padding: 0 0 0 8px;
 }
 ol ul {
-	list-style-type: disc;
-	margin: 0.5em 0;
+  list-style-type: disc;
+  margin: 0.5em 0;
 }
 .basicbox {
-	border: 1px solid #CCCCCC;
-	border-radius: 5px 5px 5px 5px;
-	margin: 1em 0;
-	padding: 0 2em;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px 5px 5px 5px;
+  margin: 1em 0;
+  padding: 0 2em;
 }
 a.backtotop, a.backtotop:active, a.backtotop:visited {
-	background: none repeat scroll 0 0 #DEDEDE;
-	border: 1px solid #A7A7A7;
-	border-radius: 3px 3px 3px 3px;
-	float: right;
-	font: 0.7rem/0.7rem verdana;
-	padding: 3px 6px 4px;
-	text-decoration: none;
+  background: none repeat scroll 0 0 #DEDEDE;
+  border: 1px solid #A7A7A7;
+  border-radius: 3px 3px 3px 3px;
+  float: right;
+  font: 0.7rem/0.7rem verdana;
+  padding: 3px 6px 4px;
+  text-decoration: none;
 }
 a.backtotop:hover {
-	background: none repeat scroll 0 0 #A7A7A7;
-	color: white;
+  background: none repeat scroll 0 0 #A7A7A7;
+  color: white;
 }
 div.Quote {
   /*border-bottom: 1px solid #B7B7B7;
@@ -198,14 +198,14 @@ div.Quote {
   display: inline;
 }
 .Quote {
-	margin: 1.8em;
-	text-align: left;
-	font-style: italic;
-	display: table-row;
+  margin: 1.8em;
+  text-align: left;
+  font-style: italic;
+  display: table-row;
 }
 div.QuoteAuthor {
-	display: block;
-	font-style: italic;
+  display: block;
+  font-style: italic;
 }
 .Quote > p, 
 .QuoteAuthor {
@@ -227,75 +227,75 @@ div.QuoteAuthor {
 }
 
 #CitationsandReferences {
-	margin: 3em 0;
-	outline: 1px solid #DBDBDB;
-	padding: 3px;
+  margin: 3em 0;
+  outline: 1px solid #DBDBDB;
+  padding: 3px;
 }
 .clicktoggle {
-	display: inline-block;
-	float: left;
-	margin: 0 8px 0 0;
-	padding: 0;
-	position: relative;
-	top: -8px;
+  display: inline-block;
+  float: left;
+  margin: 0 8px 0 0;
+  padding: 0;
+  position: relative;
+  top: -8px;
 }
 #collapse {
-	padding: 25px;
+  padding: 25px;
 }
 #CitationsandReferences > h2 {
-	line-height: 1rem;
-	margin: 0 0 -10px;
-	padding: 6px 0 0;
-	position: relative;
-	top: -1rem;
+  line-height: 1rem;
+  margin: 0 0 -10px;
+  padding: 6px 0 0;
+  position: relative;
+  top: -1rem;
 }
 
 p.Horizontalline, li.Horizontalline, div.Horizontalline {
-	border-top: 1px solid #EAEAEA;
-	color: #EAEAEA;
-	font-size: 1px;
-	margin: 1.8rem 0 0;
-	padding: 0;
+  border-top: 1px solid #EAEAEA;
+  color: #EAEAEA;
+  font-size: 1px;
+  margin: 1.8rem 0 0;
+  padding: 0;
 }
 
 .Icon {
-	display: inline-block;
-	font-size: 10pt;
-	font-style: italic;
-	height: 34px;
-	margin: 0 0 0 4px;
-	position: relative;
-	text-indent: 0;
-	top: -8px;
-	width: 42px;
+  display: inline-block;
+  font-size: 10pt;
+  font-style: italic;
+  height: 34px;
+  margin: 0 0 0 4px;
+  position: relative;
+  text-indent: 0;
+  top: -8px;
+  width: 42px;
 }
-.Discussion	{background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_discussion.gif") no-repeat scroll 0 0 transparent;}
+.Discussion  {background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_discussion.gif") no-repeat scroll 0 0 transparent;}
 .Interactive{background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_interactive.gif") no-repeat scroll 0 0 transparent;}
-.Journal	{background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_journal.gif") no-repeat scroll 0 0 transparent;}
-.Paper		{background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_paper.gif") no-repeat scroll 0 0 transparent;}
-.Reading	{background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_reading.gif") no-repeat scroll 0 0 transparent;}
-.Survey		{background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_survey.gif") no-repeat scroll 0 0 transparent;}
-.Video		{background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_video.gif") no-repeat scroll 0 0 transparent;}
-.Audio		{background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_audio.gif") no-repeat scroll 0 0 transparent;}
-.PBSicon	{background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_pbs.gif") no-repeat scroll 0 0 transparent;}
-.NASAicon	{background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_nasa.gif") no-repeat scroll 0 0 transparent;}
+.Journal  {background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_journal.gif") no-repeat scroll 0 0 transparent;}
+.Paper    {background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_paper.gif") no-repeat scroll 0 0 transparent;}
+.Reading  {background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_reading.gif") no-repeat scroll 0 0 transparent;}
+.Survey    {background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_survey.gif") no-repeat scroll 0 0 transparent;}
+.Video    {background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_video.gif") no-repeat scroll 0 0 transparent;}
+.Audio    {background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_audio.gif") no-repeat scroll 0 0 transparent;}
+.PBSicon  {background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_pbs.gif") no-repeat scroll 0 0 transparent;}
+.NASAicon  {background: url("http://teacherline.pbs.org/teacherline/courses/common_images/icon_nasa.gif") no-repeat scroll 0 0 transparent;}
 
 .CitationsReferencesBtn {
-	margin: 25px 0;
-	padding: 10px;
-	text-align: left !important;
+  margin: 25px 0;
+  padding: 10px;
+  text-align: left !important;
 }
 #IconOverview .Icon {
-	margin: 0 6px 6px 0;
+  margin: 0 6px 6px 0;
 }
 #IconOverview td {
-	border: medium none;
-	padding: 0;
-	white-space: nowrap;
-	width: 10%;
+  border: medium none;
+  padding: 0;
+  white-space: nowrap;
+  width: 10%;
 }
 #IconOverview p {
-	margin: 15px 0 0;
+  margin: 15px 0 0;
 }
 .session_resource dd {
   border-bottom: 1px solid #D9D9D9;
@@ -342,11 +342,11 @@ text-align: center;
   z-index: 1000;
 }
 p.navitem, li.navitem, div.navitem {
-	color: black;
-	font-size: 10pt;
-	margin-left: 0.25in;
-	margin-top: 0;
-	text-indent: -0.25in;
+  color: black;
+  font-size: 10pt;
+  margin-left: 0.25in;
+  margin-top: 0;
+  text-indent: -0.25in;
 }
 p.navitemselected, li.navitemselected, div.navitemselected {
 color: black;
@@ -362,10 +362,10 @@ text-indent: -0.25in;
 .jumplink{}
 
 .nolines td {
-	border: 1px none white;
+  border: 1px none white;
 }
 table.nolines  {
-	border: 1px none white;
+  border: 1px none white;
 }
 .checklist{}
 
@@ -375,7 +375,7 @@ table.checklist {
   width: 100%;
 }
 table.allcenter td {
-	text-align: center;
+  text-align: center;
 }
 .sessionresources td {padding: 12px;}
 .sessionresources tr {vertical-align: top;}
@@ -388,7 +388,7 @@ table.checklist td {border: 1px solid silver;}
 table.checklist td {padding: 12px;}
 table.checklist tr {vertical-align: top;}
 table.checklist th {
-	text-align: left;
+  text-align: left;
 }
 table.checklist tr td:first-child { width: 50%; }
 
@@ -440,35 +440,35 @@ margin: 0;
 #navlist_s1 #current{font-weight: bold;}
 
 #nav-session li {
-	display: block;
-	float: left;
-	line-height: 1rem;
-	margin: 2px;
-	padding: 55px 0 6px;
-	text-align: center;
-	width: 93px;
+  display: block;
+  float: left;
+  line-height: 1rem;
+  margin: 2px;
+  padding: 55px 0 6px;
+  text-align: center;
+  width: 93px;
 }
 #nav-session-container {
-	float: left;
-	margin: 0 0 2rem;
-	 width: 100%;
+  float: left;
+  margin: 0 0 2rem;
+   width: 100%;
 }
 ul#nav-session {
-	background-color: #E6F7F7;
-	float: left;
-	margin: 0;
-	padding: 0;
+  background-color: #E6F7F7;
+  float: left;
+  margin: 0;
+  padding: 0;
 }
 #nav-session li.current {
-	background-color: #C3E2E2;
-	font-weight: bold;
+  background-color: #C3E2E2;
+  font-weight: bold;
 }
-			.nav-session-1{background: url("http://teacherline.pbs.org/teacherline/courses/MATH165/images/session1_sm.jpg") no-repeat scroll 0 0 transparent;}
-			.nav-session-2{background: url("http://teacherline.pbs.org/teacherline/courses/MATH165/images/session2_sm.jpg") no-repeat scroll 0 0 transparent;}
-			.nav-session-3{background: url("http://teacherline.pbs.org/teacherline/courses/MATH165/images/session3_sm.jpg") no-repeat scroll 0 0 transparent;}
-			.nav-session-4{background: url("http://teacherline.pbs.org/teacherline/courses/MATH165/images/session4_sm.jpg") no-repeat scroll 0 0 transparent;}
-			.nav-session-5{background: url("http://teacherline.pbs.org/teacherline/courses/MATH165/images/session5_sm.jpg") no-repeat scroll 0 0 transparent;}
-			.nav-session-6{background: url("http://teacherline.pbs.org/teacherline/courses/MATH165/images/session6_sm.jpg") no-repeat scroll 0 0 transparent;}
+      .nav-session-1{background: url("http://teacherline.pbs.org/teacherline/courses/MATH165/images/session1_sm.jpg") no-repeat scroll 0 0 transparent;}
+      .nav-session-2{background: url("http://teacherline.pbs.org/teacherline/courses/MATH165/images/session2_sm.jpg") no-repeat scroll 0 0 transparent;}
+      .nav-session-3{background: url("http://teacherline.pbs.org/teacherline/courses/MATH165/images/session3_sm.jpg") no-repeat scroll 0 0 transparent;}
+      .nav-session-4{background: url("http://teacherline.pbs.org/teacherline/courses/MATH165/images/session4_sm.jpg") no-repeat scroll 0 0 transparent;}
+      .nav-session-5{background: url("http://teacherline.pbs.org/teacherline/courses/MATH165/images/session5_sm.jpg") no-repeat scroll 0 0 transparent;}
+      .nav-session-6{background: url("http://teacherline.pbs.org/teacherline/courses/MATH165/images/session6_sm.jpg") no-repeat scroll 0 0 transparent;}
 /*IE workaround -- All IE browsers*/
 * html #navlist_s1 li{
 border-left: 1px solid black;
@@ -476,32 +476,32 @@ padding: 0 0.4em 0 0.4em;
 margin: 0 0.4em 0 -0.4em;
 }
 ul.navitem {
-	border: 1px solid #DBDBDB;
-	border-radius: 5px 5px 5px 5px;
-	list-style: none outside none;
-	padding: 0 ;
+  border: 1px solid #DBDBDB;
+  border-radius: 5px 5px 5px 5px;
+  list-style: none outside none;
+  padding: 0 ;
 }
 .navitem > li {
-	border-radius: 2px 2px 2px 2px;
-	display: inline-block;
-	margin: -1px;
-	padding: 0.3em 0.6em;
+  border-radius: 2px 2px 2px 2px;
+  display: inline-block;
+  margin: -1px;
+  padding: 0.3em 0.6em;
 }
 li.current {
-	background: none repeat scroll 0 0 #EAEAEA;
-	border: 1px solid #CBCBCB;
-	font-weight: bold;
-	padding: 0 6px !important;
+  background: none repeat scroll 0 0 #EAEAEA;
+  border: 1px solid #CBCBCB;
+  font-weight: bold;
+  padding: 0 6px !important;
 }
 /*Win IE browsers - hide from Mac IE */ * html #navlist_s1 { height: 1%; } * html #navlist_s1 li{display: block;float: left;}
 /*Mac IE 5*/* html #navlist_s1 li:first-child { border-left: 0; }
 
 /* ============================================== */.img_right {
-	float: right;
-	margin-left: 1.2em;
+  float: right;
+  margin-left: 1.2em;
 }
 .rubricpage table {
-	table-layout: fixed;
+  table-layout: fixed;
 }
 /*topnav and its tabs*/
 

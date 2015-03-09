@@ -32,7 +32,7 @@ class theme_spc_core_renderer extends core_renderer {
         // Return the custom menu
         return $content;
     }
-	protected function render_custom_menu_item(custom_menu_item $menunode) {
+    protected function render_custom_menu_item(custom_menu_item $menunode) {
         // Required to ensure we get unique trackable id's
         static $submenucount = 0;
         if ($menunode->has_children()) {
@@ -70,53 +70,53 @@ class theme_spc_core_renderer extends core_renderer {
         return $content;
     }   
     /**
-	 * Specialized class for displaying a block with a list of icons/text labels
-	 *
-	 * The get_content method should set $this->content->items and (optionally)
-	 * $this->content->icons, instead of $this->content->text.
-	 */
+     * Specialized class for displaying a block with a list of icons/text labels
+     *
+     * The get_content method should set $this->content->items and (optionally)
+     * $this->content->icons, instead of $this->content->text.
+     */
 
    public function list_block_contents_spc($items) {
-		$detect_first = 0;
-		global $topArticle;
-		 $topArticle=0;
+        $detect_first = 0;
+        global $topArticle;
+         $topArticle=0;
         $row = 0;
         $lis = array();
         foreach ($items as $key => $item_arr) {
         //print_r($item_arr);
-			  $item_page_id     = $item_arr['page_id'];
-		 	  $item_a_title     = $item_arr['a_title'];
-			  $item_a_url       = $item_arr['a_url'];
-			  $item_cm_instance = $item_arr['cm_instance'];
-			  $item_cm_module   = $item_arr['cm_module'];
-			  $item_cm_visible  = $item_arr['cm_visible'];
-			  $item_cm_icon_url = $item_arr['cm_icon_url'];
-			  $item_instancename= $item_arr['instancename'];
-			  $thispage    = $item_arr['thispage'];
-			  $item_cm_extra    = $item_arr['cm_extra'];//unused at moment
-			//$item_currmod     = $item_arr['currmod'];
-			//$item_context     = $item_arr['context'];
-			//$item_ac_cm       =>$item_arr['ac_cm'];
-			$item_urlid="";
-			$foo = parse_url($item_a_url);
-			parse_str($foo['query'], $bar);
-			$item_urlid= $bar['id'];
+              $item_page_id     = $item_arr['page_id'];
+               $item_a_title     = $item_arr['a_title'];
+              $item_a_url       = $item_arr['a_url'];
+              $item_cm_instance = $item_arr['cm_instance'];
+              $item_cm_module   = $item_arr['cm_module'];
+              $item_cm_visible  = $item_arr['cm_visible'];
+              $item_cm_icon_url = $item_arr['cm_icon_url'];
+              $item_instancename= $item_arr['instancename'];
+              $thispage    = $item_arr['thispage'];
+              $item_cm_extra    = $item_arr['cm_extra'];//unused at moment
+            //$item_currmod     = $item_arr['currmod'];
+            //$item_context     = $item_arr['context'];
+            //$item_ac_cm       =>$item_arr['ac_cm'];
+            $item_urlid="";
+            $foo = parse_url($item_a_url);
+            parse_str($foo['query'], $bar);
+            $item_urlid= $bar['id'];
 //echo "$thispage == $item_instancename";
-			$foopagename = $thispage == $item_instancename;
-		if (($item_page_id!==$item_urlid) xor ($foopagename =='1'))
-			{
-			$string = '<a './*$item_a_title.'" class="'.$item_cm_visible.'" '. '" '.$item_cm_instance.*/' href="' . $item_a_url . '">' .$item_instancename . '</a>';
-        	$item = html_writer::tag('li', $string);
-			}
-		else
-			{
-			$string =$item_instancename;
-        	$item = html_writer::tag('li', $string, array('class' => 'active'));//
-			if ($detect_first==0){$item .=  "\r\n<script>var topart =1; </script>";}
-			//this is used to signal that this is the first article in a course which gets special styling
-			}
+            $foopagename = $thispage == $item_instancename;
+        if (($item_page_id!==$item_urlid) xor ($foopagename =='1'))
+            {
+            $string = '<a './*$item_a_title.'" class="'.$item_cm_visible.'" '. '" '.$item_cm_instance.*/' href="' . $item_a_url . '">' .$item_instancename . '</a>';
+            $item = html_writer::tag('li', $string);
+            }
+        else
+            {
+            $string =$item_instancename;
+            $item = html_writer::tag('li', $string, array('class' => 'active'));//
+            if ($detect_first==0){$item .=  "\r\n<script>var topart =1; </script>";}
+            //this is used to signal that this is the first article in a course which gets special styling
+            }
 
-			$detect_first+=1;
+            $detect_first+=1;
 
             //$item = html_writer::tag('li', $string, array('class' => 'active'));
             //$item = html_writer::start_tag('li', array('class' => 'spcmenu' . $row));
@@ -131,20 +131,20 @@ class theme_spc_core_renderer extends core_renderer {
             /*
             $item = $item.'<pre>'
                         .'<br>pagid|'.$item_page_id     
-						.'<br>a_tit|'.$item_a_title     
-						.'<br>a_url|'.$item_a_url       
-						.'<br>insta|'.$item_cm_instance 
-						.'<br>instn|'.$item_instancename
-						.'<br>modul|'.$item_cm_module   
-						.'<br>visib|'.$item_cm_visible  
-						.'<br>iconu|'.$item_cm_icon_url 
-						.'<br>extra|'.$item_cm_extra 
-						//.'<br>ac_cm|'.$item_ac_cm
-						//.'<br>c_mod|'.print_r($item_currmod)
-						//.'<br>cntxt|'.print_r($item_context)
-						.'</pre>';
-			*/			
-			$lis[] = $item;
+                        .'<br>a_tit|'.$item_a_title     
+                        .'<br>a_url|'.$item_a_url       
+                        .'<br>insta|'.$item_cm_instance 
+                        .'<br>instn|'.$item_instancename
+                        .'<br>modul|'.$item_cm_module   
+                        .'<br>visib|'.$item_cm_visible  
+                        .'<br>iconu|'.$item_cm_icon_url 
+                        .'<br>extra|'.$item_cm_extra 
+                        //.'<br>ac_cm|'.$item_ac_cm
+                        //.'<br>c_mod|'.print_r($item_currmod)
+                        //.'<br>cntxt|'.print_r($item_context)
+                        .'</pre>';
+            */            
+            $lis[] = $item;
             //.'['.$item_page_id.'|'.$item_cm_instance.']';
             $row = 1 - $row; // Flip even/odd.
         }
@@ -165,9 +165,9 @@ class theme_spc_core_renderer extends core_renderer {
                
               // We don't want to print navigation and settings blocks here.
               if ($bc->attributes['class'] == 'block_settings  block' && !$this->page->user_allowed_editing()) 
-                	{$output .= $this->block($bc, $region);}
+                    {$output .= $this->block($bc, $region);}
                 elseif ($bc->attributes['class'] == 'block_navigation  block' && !$this->page->user_allowed_editing()) 
-                	{$output .= $this->block($bc, $region);$output .='<!--SUPPRESSED-->';}
+                    {$output .= $this->block($bc, $region);$output .='<!--SUPPRESSED-->';}
                 else{$output .= $this->block($bc, $region);}          
                              
             } else if ($bc instanceof block_move_target) {

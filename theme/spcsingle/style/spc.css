@@ -246,11 +246,11 @@ div.region-content > .submitbtns a.arrow_link:hover,
 .submitbtns > a:hover,
 input[type="submit"]:hover,
 div.ft span.button-group  button[type="button"]:hover{
-	/*background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #2f72b5), color-stop(1, #67b4eb) );
-	background:-moz-linear-gradient( center top, #2f72b5 5%, #67b4eb 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2f72b5', endColorstr='#67b4eb');*/
-	background-color: #84A9C6;
-	cursor:pointer;
+  /*background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #2f72b5), color-stop(1, #67b4eb) );
+  background:-moz-linear-gradient( center top, #2f72b5 5%, #67b4eb 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2f72b5', endColorstr='#67b4eb');*/
+  background-color: #84A9C6;
+  cursor:pointer;
 }
 .moodle-dialogue-confirm .confirmation-dialogue input:active;
 .button:active,
@@ -258,8 +258,8 @@ div.ft span.button-group  button[type="button"]:hover{
 div.region-content > .submitbtns a.arrow_link:active,
 .submitbtns > a:active,
 div.ft span.button-group  button[type="button"]:active{
-	position:relative;
-	top:1px;
+  position:relative;
+  top:1px;
 }
 /* large button specific attributes  */
 
@@ -267,21 +267,21 @@ div.ft span.button-group  button[type="button"]:active{
 .button, input[type="submit"] ,
 div.region-content > .submitbtns a.arrow_link,
 .submitbtns > a{
-	-moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
-	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
-	
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-	border-radius:3px;
-	
-	border:none/*3px solid #ffffff*/;
-	
+  -moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+  box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+  
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+  
+  border:none/*3px solid #ffffff*/;
+  
   color: #173A56;
-	font-size:1em;
-	padding:2px 8px;
-	
-	margin: 0.5em;
+  font-size:1em;
+  padding:2px 8px;
+  
+  margin: 0.5em;
 }
 div#mod_quiz_navblock {
   display: none;
@@ -290,16 +290,16 @@ div#mod_quiz_navblock {
 /* small button specific attributes  */
 .smallbutton, div#mod_quiz_navblock div.singlebutton input[type="submit"] ,
 div.ft span.button-group  button[type="button"]{
-	-moz-box-shadow:inset 0px 0px 0px 0px #bbdaf7;
-	-webkit-box-shadow:inset 0px 0px 0px 0px #bbdaf7;
-	box-shadow:inset 0px 0px 0px 0px #bbdaf7;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-	border-radius:3px;
-	border:1px solid #ffffff;
-	color:#ffffff;
-	font-size:11px;
-	padding:3px 3px;
+  -moz-box-shadow:inset 0px 0px 0px 0px #bbdaf7;
+  -webkit-box-shadow:inset 0px 0px 0px 0px #bbdaf7;
+  box-shadow:inset 0px 0px 0px 0px #bbdaf7;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+  border:1px solid #ffffff;
+  color:#ffffff;
+  font-size:11px;
+  padding:3px 3px;
 }
 
 div#mod_quiz_navblock div.singlebutton input[type="submit"]{
@@ -623,27 +623,27 @@ a.spc-menuitem-content{}
   display: none;
 }
 .IconSPC {
-	display: inline-block;
-	font-size: 10pt;
-	font-style: italic;
-	height: 53px;
-	margin: 0 0 10px 4px;
-	position: relative;
-	text-indent: 0;
-	top: 0px;
-	width: 62px;
-	float: left;
+  display: inline-block;
+  font-size: 10pt;
+  font-style: italic;
+  height: 53px;
+  margin: 0 0 10px 4px;
+  position: relative;
+  text-indent: 0;
+  top: 0px;
+  width: 62px;
+  float: left;
 }
 .certificate_requirement_prompt {
-				 background: url("[[pix:theme|icon_certificate]]") 
-				 no-repeat scroll 539px 10px #E1EEF7;}
+         background: url("[[pix:theme|icon_certificate]]") 
+         no-repeat scroll 539px 10px #E1EEF7;}
 .certificate_requirement_prompt {
   border: 1px solid #8AB3CE;
   padding-right: 5em !important;
   text-align: justify;
 }
-.Certificate	{background: url("[[pix:theme|icon_certificate]]") no-repeat scroll 0 0 transparent;}
-.Badge	        {background: url("[[pix:theme|icon_badge]]") no-repeat scroll 0 0 transparent;}
+.Certificate  {background: url("[[pix:theme|icon_certificate]]") no-repeat scroll 0 0 transparent;}
+.Badge          {background: url("[[pix:theme|icon_badge]]") no-repeat scroll 0 0 transparent;}
 /*.Lobjective     {background: url("[[pix:theme|icon_lobjective]]") }*/
 .Lobjective {
   background: none no-repeat scroll 0 9px #EBF2F4;
@@ -925,27 +925,27 @@ a.pass, span.pass {  background: url("[[pix:theme|progress_pass]]") no-repeat sc
 }
 /************************* course specific */
 .Icon {
-	display: inline-block;
-	font-size: 10pt;
-	font-style: italic;
-	height: 34px;
-	margin: 0 0 0 4px;
-	position: relative;
-	text-indent: 0;
-	top: -8px;
-	width: 42px;
+  display: inline-block;
+  font-size: 10pt;
+  font-style: italic;
+  height: 34px;
+  margin: 0 0 0 4px;
+  position: relative;
+  text-indent: 0;
+  top: -8px;
+  width: 42px;
 }
 
-.Discussion	{background: url("[[pix:theme|icon_discussion]]") no-repeat scroll 0 0 transparent;}
+.Discussion  {background: url("[[pix:theme|icon_discussion]]") no-repeat scroll 0 0 transparent;}
 .Interactive{background: url("[[pix:theme|icon_interactive]]") no-repeat scroll 0 0 transparent;}
-.Journal	{background: url("[[pix:theme|icon_journal]]") no-repeat scroll 0 0 transparent;}
-.Paper		{background: url("[[pix:theme|icon_paper]]") no-repeat scroll 0 0 transparent;}
-.Reading	{background: url("[[pix:theme|icon_reading]]") no-repeat scroll 0 0 transparent;}
-.Survey		{background: url("[[pix:theme|icon_survey]]") no-repeat scroll 0 0 transparent;}
-.Video		{background: url("[[pix:theme|icon_video]]") no-repeat scroll 0 0 transparent;}
-.Audio		{background: url("[[pix:theme|icon_audio]]") no-repeat scroll 0 0 transparent;}
-.PBSicon	{background: url("[[pix:theme|icon_pbs]]") no-repeat scroll 0 0 transparent;}
-.NASAicon	{background: url("[[pix:theme|icon_nasa]]") no-repeat scroll 0 0 transparent;}
+.Journal  {background: url("[[pix:theme|icon_journal]]") no-repeat scroll 0 0 transparent;}
+.Paper    {background: url("[[pix:theme|icon_paper]]") no-repeat scroll 0 0 transparent;}
+.Reading  {background: url("[[pix:theme|icon_reading]]") no-repeat scroll 0 0 transparent;}
+.Survey    {background: url("[[pix:theme|icon_survey]]") no-repeat scroll 0 0 transparent;}
+.Video    {background: url("[[pix:theme|icon_video]]") no-repeat scroll 0 0 transparent;}
+.Audio    {background: url("[[pix:theme|icon_audio]]") no-repeat scroll 0 0 transparent;}
+.PBSicon  {background: url("[[pix:theme|icon_pbs]]") no-repeat scroll 0 0 transparent;}
+.NASAicon  {background: url("[[pix:theme|icon_nasa]]") no-repeat scroll 0 0 transparent;}
 
 .popup {
   background: url("[[pix:theme|extlink1]]") no-repeat scroll 100% 4px transparent;
