@@ -99,8 +99,8 @@ class block_spc_menu extends block_list_spc {
         
         require_once($CFG->dirroot.'/course/lib.php');
         
-        $context = get_context_instance(CONTEXT_COURSE, $course->id);
-        $currmod = get_context_instance(CONTEXT_MODULE, $course->id);
+        $context = context_course::instance($course->id);
+        $currmod = context_module::instance($course->id);
         $isediting = $this->page->user_is_editing() && has_capability('moodle/course:manageactivities', $context);
         $modinfo = get_fast_modinfo($course);
         $options = array('overflowdiv'=>true);

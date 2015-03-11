@@ -50,7 +50,7 @@ echo "</pre>";    */
 // echo "</div> ";          
 
 //echo "<div class='debuginfo'>";
-//htmlentities (print_r($mymodinfo)); 
+//htmlentities (print_r($MODINFO)); 
 /*
     ob_start();
     print_r($PAGE->navigation); 
@@ -64,7 +64,7 @@ echo "</pre>";    */
 
 echo "<pre class='debug-hide'>";
 //print_r( $PAGE->navigation );
-//print_r($mymodinfo);
+//print_r($MODINFO);
 echo "</pre>";    
 */
 ?>    

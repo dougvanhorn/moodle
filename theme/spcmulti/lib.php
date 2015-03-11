@@ -205,7 +205,7 @@ function spc_print_section($course, $section, $mods, $modnamesused, $absolute=fa
                             $accesstext . $content . '</div>';
                 }
 
-                if (!empty($mod->groupingid) && has_capability('moodle/course:managegroups', get_context_instance(CONTEXT_COURSE, $course->id))) {
+                if (!empty($mod->groupingid) && has_capability('moodle/course:managegroups', context_course::instance($course->id))) {
                     $groupings = groups_get_all_groupings($course->id);
                     echo " <span class=\"groupinglabel\">(".format_string($groupings[$mod->groupingid]->name).')</span>';
                 }

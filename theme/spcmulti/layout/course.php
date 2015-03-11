@@ -10,6 +10,44 @@
 <?php
 require_once("$CFG->libdir/completionlib.php");
 require_once("$CFG->libdir/accesslib.php");
+
+// To help understand what's available.
+//r_error_log("\nGLOBALS:");
+//r_error_log(array_keys($GLOBALS));
+//r_error_log("\n");
+/*
+ * _GET
+ * _POST
+ * _COOKIE
+ * _FILES
+ * CFG
+ * _SERVER
+ * DB
+ * SESSION
+ * USER
+ * SITE
+ * PAGE
+ * COURSE
+ * OUTPUT
+ * FULLME
+ * ME
+ * FULLSCRIPT
+ * SCRIPT
+ * _REQUEST
+ * PERF
+ * ACCESSLIB_PRIVATE
+ * _ENV
+ * GLOBALS
+ * _SESSION
+ * relativepath
+ * forcedownload
+ * preview
+ * COMPLETION_CRITERIA_TYPES
+ * BADGE_CRITERIA_TYPES
+ * FILTERLIB_PRIVATE
+ * TL_BASE_URL
+ */
+
 global $DB;
 global $COURSE;
 
@@ -17,32 +55,32 @@ global $COURSE;
 // This is an attempt to strip the Course title from the Page title.
 // E.g., LEAD1004.1: Foobar goes to Foobar.
 //error_log("PAGE title: " . $PAGE->title);
-if (stripos($PAGE->title, ":") > 0) {
+$colon_i = stripos($PAGE_TITLE, ":");
+if ($colon_i > 0) {
     // if there's a colon, get everything after it.
-    $thispagetitle = substr($PAGE->title, stripos($PAGE->title, ":") + 1);
+    $munged_title = substr($PAGE_TITLE, $colon_i + 1);
 } else {
     // otherwise start with the title
-    $thispagetitle = $PAGE->title;
+    $munged_title = $PAGE_TITLE;
 }
+$munged_title = trim($munged_title);
+//r_error_log("Munged: " . $munged_title);
 
-// trim the string.
-$thispagetitle = trim($thispagetitle);
-//error_log("thispagetitle: " . $thispagetitle);
-
-$spcmenu="<div class=\"content\" id=\"spcmenu_container\">\n<ul id=\"spcmenu\">\n";
-$extrasmenu="<div class=\"content\" id=\"extrasmenu_container\">\n<ul id=\"extrasmenu\">\n";
+$extrasmenu = "";
 $certmenu = "";
 
 global $ME; //THIS PAGE's URL
 
-$sectionno = 0;
+$current_section_number = 0;
 
 if(stripos($ME, '/mod/')) {
     $cm = $PAGE->cm;
-    $sectionno = $cm->sectionnum;
+    $current_section_number = $cm->sectionnum;
 }
 
 $coursepassed = false;
+// this is a little fucked, not sure what's going on here, it OR'd over the 
+// loop and used after the loop.
 $currpageflag = false;
 $currpageclass = "";
 $spcmenulines ='';
@@ -50,37 +88,38 @@ $checkdb ='';
 $writeline='';        
 
 
-foreach ($mymodinfo as $key => $currentarry) {
-    $href= "href='$CFG->wwwroot/mod/$currentarry->mod/view.php?id=$currentarry->cm'";
-    $pagename = trim($currentarry->name);
+// Loop over the Course ModInfo objects.
+foreach ($MODINFO->cms as $course_modinfo) {
+    //r_error_log($course_modinfo);
+
+    $href= "href=" . $course_modinfo->url->out();
+    $pagename = trim($course_modinfo->name);
     $currpage = "";
 
-    if ($thispagetitle == $pagename) {
-        //error_log("Page in Array: " . $pagename);
-        //error_log("=== Page Title found in Array! ===");
+    if ($munged_title == $pagename) {
         $currpage = "class='current'";
         $currpageflag = true;
-        $href="";
+        $href = "";
     }
 
     $progress = 'not_viewed';
-    $doctype  = $currentarry->mod;
-    //Set doctype for certificate page
+    $page_type  = $course_modinfo->modname;
+
+    //Set page_type for certificate page
     if (strcasecmp($pagename, 'certificate') == 0) {
-        $doctype  = 'cert';
+        $page_type  = 'cert';
     }
     if (strcasecmp($pagename, 'certificate-earned') == 0) {
-        $doctype  = 'cert_earned'; 
+        $page_type  = 'cert_earned'; 
         $certtype  = 'earned'; 
         $pagename = 'Certificate Earned';
     }
 
-    $topic  = $currentarry->section; //this refers to Moodle "topics" within a course (called sections here)
     $tooltip = "";
     $showthis = "";
     /* ========================================== */        
     ////     GET GRADE FROM QUIZ
-    if ($doctype == 'quiz') {
+    if ($page_type == 'quiz' && false) {
         // gradeinfo holds: itemnumber, scaleid, name, grademin, grademax, 
         // gradepass, locked, hidden, grades (Array).
         //error_log(print_r($current_arry, true));
@@ -113,7 +152,11 @@ foreach ($mymodinfo as $key => $currentarry) {
         }
     }
     /* ========================================== */
-    $writeline = "<li $currpage><span class=\"$doctype\"><a $href class=\"$progress\" $tooltip>$pagename</a></span></li>\n";
+    $writeline = <<<EOD
+<li $currpage>
+    <span class="$page_type"><a $href class="$progress" $tooltip>$pagename</a></span>
+</li>
+EOD;
         
 
     // Record Certificate Earned Date.
@@ -133,47 +176,58 @@ foreach ($mymodinfo as $key => $currentarry) {
     }
 
     // CERTIFICATE EARNED TOGGLE    
-    if ($doctype == 'cert' && $coursepassed == true) {
+    if ($page_type == 'cert' && $coursepassed == true) {
         continue;
     }
-    if ($doctype == 'cert_earned' && $coursepassed == false) {
+    if ($page_type == 'cert_earned' && $coursepassed == false) {
         continue;
     }
-    if ($doctype == 'cert' OR $doctype == 'cert_earned') {
+    if ($page_type == 'cert' OR $page_type == 'cert_earned') {
         $certmenu .= $writeline;
         continue;
     }
 
     $ignored_modules = array("label", "resource");
     
-    if ($topic == $sectionno && in_array($doctype, $ignored_modules)<1) {
-        if ($topic =='0') {
+    //r_error_log("Current Section: " . $current_section_number);
+    //r_error_log("Topic: " . $course_modinfo->sectionnum);
+    //r_error_log("Page Type: " . $page_type);
+    if ($course_modinfo->sectionnum == $current_section_number && in_array($page_type, $ignored_modules)<1) {
+        if ($course_modinfo->sectionnum == '0') {
+            //r_error_log("section match Extra menu writing $pagename");
             $extrasmenu .= $writeline;
         } else {
+            //r_error_log("section match SPC menu writing $pagename");
             $spcmenulines .= $writeline;
         }
-    } elseif ($topic =='0' && in_array($doctype, $ignored_modules)<1) {
+    } elseif ($course_modinfo->sectionnum == '0' && in_array($page_type, $ignored_modules)<1) {
+        //r_error_log("First section Extra menu writing $pagename");
         $extrasmenu .= $writeline;
     }
 }
 
 //nothing else set the current page flag so this must be it.
 if ($currpageflag == false) {
-    $currpageclass = "class='current'";
+    $currpageclass = " class='current'";
 }
 
-$homeline="<li $currpageclass><span class=\"home\"><a href=\"$CFG->wwwroot/course/view.php?id=$COURSE->id\" class=\"not_viewed\">Overview</a></span></li>\n";
-$menuclose = "\n</ul></div>";
-
-
-echo "    $spcmenu 
-          $homeline 
-          $spcmenulines 
-          $certmenu 
-          $menuclose 
-          $extrasmenu 
-          $menuclose";
-
+echo <<<EOD
+<!-- Side Menu -->
+<div class="content" id="spcmenu_container">
+    <ul id="spcmenu">
+        <li$currpageclass>
+            <span class="home"><a href="$CFG->wwwroot/course/view.php?id=$COURSE->id" class="not_viewed">Overview</a></span>
+        </li>
+        $spcmenulines 
+        $certmenu 
+    </ul>
+</div>
+<div class="content" id="extrasmenu_container">
+    <ul id="extrasmenu">
+        $extrasmenu 
+    </ul>
+</div>
+EOD;
 ?>
 
 <?php if ($hassidepre) {echo $OUTPUT->blocks_for_region('side-pre');}?>

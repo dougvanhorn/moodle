@@ -1,20 +1,27 @@
 <?php
+// Provides a lot of "global-ish" variables to layout files that include this 
+// one.  If you're reading a layout file and don't know where a variable came 
+// from, it's probably from in here.
+
 $hassidepre = $PAGE->blocks->region_has_content('side-pre', $OUTPUT);
 $hassidepost = $PAGE->blocks->region_has_content('side-post', $OUTPUT);
-
 $custommenu = $OUTPUT->custom_menu();
 $hascustommenu = (empty($PAGE->layout_options['nocustommenu']) && !empty($custommenu));
-
 $bodyclasses = array();
 
 if ($hascustommenu) {
     $bodyclasses[] = 'has_custom_menu';
 }
+
 $fullbaseurl = "$CFG->wwwroot";
+
+// Set this globally.  If there's an error, the page title is modified.
+$PAGE_TITLE = $PAGE->title;
+
 echo $OUTPUT->doctype() ?>
 <html <?php echo $OUTPUT->htmlattributes() ?>>
 <head>
-    <title><?php echo $PAGE->title ?></title>
+    <title><?php echo $PAGE_TITLE ?></title>
     <link rel="shortcut icon" href="<?php echo $OUTPUT->pix_url('favicon', 'theme')?>" />
     <meta name="description" content="<?php p(strip_tags(format_text($SITE->summary, FORMAT_HTML))) ?>" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
@@ -25,19 +32,19 @@ echo $OUTPUT->doctype() ?>
 
 <?php 
 
-$mymodinfo = get_fast_modinfo($PAGE->course);
+$MODINFO = get_fast_modinfo($PAGE->course);
 
 $course = $PAGE->course;
 require_once($CFG->dirroot.'/course/lib.php');
-$context = get_context_instance(CONTEXT_COURSE, $course->id);
+$context = context_course::instance($course->id);
 
 //ADD GRADES GET BRANDING IMAGE
-// adds gradeinfo array to each graded activity in mymodinfo array
+// adds gradeinfo array to each graded activity in MODINFO array
 require_once($CFG->libdir.'/gradelib.php');
                 //echo $COURSE->id;
 //$completioninfo = new completion_info($COURSE->id);
                 //$completiondata = $completioninfo->get_data($thismod, true);
-foreach ($mymodinfo as $key => $currentarry) {
+foreach ($MODINFO as $key => $currentarry) {
     /*QUIZ GRADES*/
     if ($currentarry->mod=='quiz') {
         $quizid  = $currentarry->id;
@@ -62,7 +69,7 @@ foreach ($mymodinfo as $key => $currentarry) {
     $currname='';
     if ($currentarry->mod=='resource') {
         $currname=$currentarry->name.'_url';
-        $context = get_context_instance(CONTEXT_MODULE, $currentarry->cm);
+        $context = context_module::instance($currentarry->cm);
         $currentarry -> context = $context;
         $br_contextid = $currentarry ->context->id;
         $br_arrpath = explode("/", $currentarry ->context->path);
@@ -84,7 +91,7 @@ foreach ($mymodinfo as $key => $currentarry) {
 // format: variable_name_desired|one|or|more|content|elements|separated|by|pipes
 // e.g. Top Menu Item (has two array members):
 // top_menu_item|'Additional PD'|http://teacherline.org/search.py?terms=term
-foreach ($mymodinfo as $key => $arr_value) {
+foreach ($MODINFO as $key => $arr_value) {
     $currentarry = $arr_value; //print_r($currentarry);
     if ($currentarry->mod =='label') {
         $value = $currentarry->extra;
