@@ -197,12 +197,15 @@ class theme_spcmulti_core_renderer extends core_renderer {
 require_once($CFG->dirroot.'/course/format/topics/renderer.php');
 
 /**
+ * DEPRECATED.  This has changed since Moodle 2.3:
+ * https://docs.moodle.org/dev/Course_formats
+ *
  * Overridden renderers are triggered by the $THEME->rendererfactory = 
  * 'theme_overridden_renderer_factory' setting.
  *
  * Naming convention overrides the Format Topics Renderer.
  */
-class theme_spcmulti_format_topics_renderer extends format_topics_renderer {
+class _theme_spcmulti_format_topics_renderer extends format_topics_renderer {
    
     //protected  function section_header($section, $course, $onsectionpage, $sectionreturn=0) {
     //    global $PAGE;
@@ -210,6 +213,7 @@ class theme_spcmulti_format_topics_renderer extends format_topics_renderer {
     //}
 
     protected function section_activity_summary($section, $course, $mods) {
+
         if (empty($section->sequence)) {
             return '';
         }
