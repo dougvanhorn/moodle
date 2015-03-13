@@ -187,21 +187,28 @@ EOD;
         continue;
     }
 
-    $ignored_modules = array("label", "resource");
+    $include_page_type = (in_array($page_type, array("label", "resource")) < 1);
     
-    //r_error_log("Current Section: " . $current_section_number);
-    //r_error_log("Topic: " . $course_modinfo->sectionnum);
-    //r_error_log("Page Type: " . $page_type);
-    if ($course_modinfo->sectionnum == $current_section_number && in_array($page_type, $ignored_modules)<1) {
+    if ($course_modinfo->sectionnum == $current_section_number && $include_page_type) {
+        //r_error_log($course_modinfo->id);
+        //r_error_log("1 Current Section: " . $current_section_number);
+        //r_error_log("1 Topic: " . $course_modinfo->sectionnum);
+        //r_error_log("1 Page Type: " . $page_type);
+        //r_error_log("1 Include Page Type: " . $include_page_type);
+        //r_error_log("\n\n");
         if ($course_modinfo->sectionnum == '0') {
-            //r_error_log("section match Extra menu writing $pagename");
+            r_error_log("1 Extra menu writing $pagename");
             $extrasmenu .= $writeline;
         } else {
-            //r_error_log("section match SPC menu writing $pagename");
+            r_error_log("1 SPC menu writing $pagename");
             $spcmenulines .= $writeline;
         }
-    } elseif ($course_modinfo->sectionnum == '0' && in_array($page_type, $ignored_modules)<1) {
-        //r_error_log("First section Extra menu writing $pagename");
+    } elseif ($course_modinfo->sectionnum == '0' && $include_page_type) {
+        //r_error_log("2 Current Section: " . $current_section_number);
+        //r_error_log("2 Topic: " . $course_modinfo->sectionnum);
+        //r_error_log("2 Page Type: " . $page_type);
+        //r_error_log("2 Extra menu writing $pagename");
+        //r_error_log("2 Include Page Type: " . $include_page_type);
         $extrasmenu .= $writeline;
     }
 }

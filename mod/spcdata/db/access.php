@@ -44,18 +44,18 @@ $capabilities = array(
         )
     )
 ,
- //'mod/spcdata:myaddinstance' => array(
- //       'captype' => 'write',
- //       'contextlevel' => CONTEXT_MODULE,
- //       'legacy' => array(
- //           'guest' => CAP_ALLOW,
- //           'student' => CAP_ALLOW,
- //           'teacher' => CAP_ALLOW,
- //           'editingteacher' => CAP_ALLOW,
- //           'manager' => CAP_ALLOW
- //       )
- //   )
-,
+// 'mod/spcdata:myaddinstance' => array(
+//        'captype' => 'write',
+//        'contextlevel' => CONTEXT_MODULE,
+//        'legacy' => array(
+//            'guest' => CAP_ALLOW,
+//            'student' => CAP_ALLOW,
+//            'teacher' => CAP_ALLOW,
+//            'editingteacher' => CAP_ALLOW,
+//            'manager' => CAP_ALLOW
+//        )
+//    )
+//,
     'mod/spcdata:view' => array(
         'captype' => 'read',
         'contextlevel' => CONTEXT_MODULE,

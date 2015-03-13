@@ -139,23 +139,35 @@ class theme_spcmulti_core_renderer extends core_renderer {
      */
     public function blocks_for_region($region) {
         $blockcontents = $this->page->blocks->get_content_for_region($region, $this);
-        $output = '<!--BeginBlock-->';
+        $output = '<!-- Begin Block -->';
         foreach ($blockcontents as $bc) {
             if ($bc instanceof block_contents) {
-               
-              // We don't want to print navigation and settings blocks here.
-              if ($bc->attributes['class'] == 'block_settings  block' && !$this->page->user_allowed_editing()) 
-                    {$output .= $this->block($bc, $region);}
-                elseif ($bc->attributes['class'] == 'block_navigation  block' && !$this->page->user_allowed_editing()) 
-                    {$output .= $this->block($bc, $region);$output .='<!--SUPPRESSED-->';}
-                else{$output .= $this->block($bc, $region);}          
+                // Looking to hide settings and navigation.
+                $data_block = $bc->attributes['data-block'];
+                //r_error_log($bc);
+                //r_error_log("data-block: [" . $bc->attributes['data-block'] . "]");
+                //r_error_log("user allowed editing: " . (int)$this->page->user_allowed_editing());
+                // We don't want to print navigation and settings blocks here.
+                if ($data_block == 'settings' && !$this->page->user_allowed_editing()) {
+                    //$output .= $this->block($bc, $region);
+                    $output .='<!-- Hiding Settings -->';
+                }
+                elseif ($data_block == 'navigation' && !$this->page->user_allowed_editing()) {
+                    //$output .= $this->block($bc, $region);
+                    $output .='<!-- Hiding Navigation -->';
+                }
+                else {
+                    $output .= $this->block($bc, $region);
+                }
                              
             } else if ($bc instanceof block_move_target) {
                 $output .= $this->block_move_target($bc);
+
             } else {
                 throw new coding_exception('Unexpected type of thing (' . get_class($bc) . ') found in list of block contents.');
             }
         }
+        $output .= '<!-- End Block -->';
         return $output;
     }
 
