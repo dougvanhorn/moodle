@@ -39,6 +39,8 @@ class theme_spcmulti_core_renderer extends core_renderer {
         // Return the custom menu
         return $content;
     }
+
+
     protected function render_custom_menu_item(custom_menu_item $menunode) {
         // Required to ensure we get unique trackable id's
         static $submenucount = 0;
@@ -82,6 +84,7 @@ class theme_spcmulti_core_renderer extends core_renderer {
      * The get_content method should set $this->content->items and (optionally)
      * $this->content->icons, instead of $this->content->text.
      */
+
 
     public function list_block_contents_spc($items) {
         $detect_first = 0;
@@ -149,10 +152,12 @@ class theme_spcmulti_core_renderer extends core_renderer {
                 //r_error_log("user allowed editing: " . (int)$this->page->user_allowed_editing());
                 // We don't want to print navigation and settings blocks here.
                 if ($data_block == 'settings' && !$this->page->user_allowed_editing()) {
+                //if ($data_block == 'settings') {
                     //$output .= $this->block($bc, $region);
                     $output .='<!-- Hiding Settings -->';
                 }
                 elseif ($data_block == 'navigation' && !$this->page->user_allowed_editing()) {
+                //elseif ($data_block == 'navigation') {
                     //$output .= $this->block($bc, $region);
                     $output .='<!-- Hiding Navigation -->';
                 }
@@ -206,8 +211,30 @@ class theme_spcmulti_core_renderer extends core_renderer {
 
 //require_once($CFG->dirroot.'/course/format/renderer.php');
 //format_section_renderer_base to format_section_renderer_base
-require_once($CFG->dirroot.'/course/format/topics/renderer.php');
+require_once($CFG->dirroot.'/course/renderer.php');
 
+
+/**
+ * Override the Course Renderer to hide the Branding line items.
+ *
+ * See course/renderer.php
+ */
+class theme_spcmulti_core_course_renderer extends core_course_renderer {
+
+    public function course_section_cm_list_item($course, &$completioninfo, cm_info $mod, $sectionreturn, $displayoptions = array()) {
+        // When displaying section line items, if it's a resource, hide it.
+        // We do this because it's where Course Designers put Branding images.
+        // There's a good chance this will need to be more specific, as this 
+        // casts a pretty wide net.
+        if ($mod->modname == 'resource') {
+            return "";
+        }
+        return parent::course_section_cm_list_item($course, $completioninfo, $mod, $sectionreturn, $displayoptions);
+    }
+}
+
+
+//require_once($CFG->dirroot.'/course/format/topics/renderer.php');
 /**
  * DEPRECATED.  This has changed since Moodle 2.3:
  * https://docs.moodle.org/dev/Course_formats
@@ -217,7 +244,7 @@ require_once($CFG->dirroot.'/course/format/topics/renderer.php');
  *
  * Naming convention overrides the Format Topics Renderer.
  */
-class _theme_spcmulti_format_topics_renderer extends format_topics_renderer {
+class _theme_spcmulti_format_topics_renderer { // extends format_topics_renderer {
    
     //protected  function section_header($section, $course, $onsectionpage, $sectionreturn=0) {
     //    global $PAGE;

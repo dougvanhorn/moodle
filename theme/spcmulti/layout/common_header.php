@@ -44,10 +44,15 @@ require_once($CFG->libdir.'/gradelib.php');
                 //echo $COURSE->id;
 //$completioninfo = new completion_info($COURSE->id);
                 //$completiondata = $completioninfo->get_data($thismod, true);
-foreach ($MODINFO as $key => $currentarry) {
+//
+$branding_urls = array(
+    "branding_url" => null,
+    "brandback_url" => null,
+);
+foreach ($MODINFO->cms as $course_modinfo) {
     /*QUIZ GRADES*/
-    if ($currentarry->mod=='quiz') {
-        $quizid  = $currentarry->id;
+    if ($course_modinfo->modname == 'quiz') {
+        $quizid  = $course_modinfo->id;
         $grading_info = grade_get_grades($COURSE->id, 'mod', 'quiz', $quizid, $USER->id);
         if (!empty($grading_info->items)) {
             $item = $grading_info->items[0];
@@ -61,22 +66,44 @@ foreach ($MODINFO as $key => $currentarry) {
                     $gradebookfeedback = $grade->str_feedback;
                 }
             }
-            $currentarry -> gradeinfo = $item;
+            $course_modinfo->gradeinfo = $item;
         }
     }
 
-    /*BRANDING and other images*/
-    $currname='';
-    if ($currentarry->mod=='resource') {
-        $currname=$currentarry->name.'_url';
-        $context = context_module::instance($currentarry->cm);
-        $currentarry -> context = $context;
-        $br_contextid = $currentarry ->context->id;
-        $br_arrpath = explode("/", $currentarry ->context->path);
+    /*
+     * BRANDING and other images
+     * The idea here is that the Course developer adds "resource" modules to 
+     * the course.  This code picks up those resources and drops them into 
+     * known buckets.
+     *
+     * Right now, there are two known buckets, defined below.
+     */
+    if ($course_modinfo->modname == 'resource') {
+        $key = $course_modinfo->name . '_url';
+        //r_error_log($key);
+        $module_context = context_module::instance($course_modinfo->id);
+        //r_error_log("PATH: " . $module_context->path);
         $filestore = get_file_storage();
-        $br_filelist = $filestore->get_area_files($br_contextid, 'mod_resource', 'content', 0, 'sortorder DESC, id ASC', false);
-        foreach ($br_filelist as $f) { $br_filename = $f->get_filename(); }
-        $$currname = "$CFG->wwwroot/pluginfile.php/$br_contextid/mod_resource/content/$br_arrpath[1]/$br_filename";
+        // context id, component, file area, item id, sort order, include dirs.
+        $filelist = $filestore->get_area_files($module_context->id, "mod_resource", "content", 0, "sortorder DESC, id ASC", false);
+        //r_error_log("Files:");
+        //r_error_log($filelist);
+        foreach ($filelist as $f) {
+            //r_error_log($f);
+            $filename = $f->get_filename();
+        }
+        $url = moodle_url::make_pluginfile_url($f->get_contextid(), $f->get_component(), $f->get_filearea(), $f->get_itemid(), $f->get_filepath(), $f->get_filename());
+        //r_error_log("Need to set $key = " . $url);
+        $branding_urls[$key] = $url;
+        //r_error_log($currname);
+        //$context = context_module::instance($course_modinfo);
+        //$course_modinfo->context = $context;
+        //$br_contextid = $course_modinfo->context->id;
+        //$br_arrpath = explode("/", $course_modinfo->context->path);
+        //$filestore = get_file_storage();
+        //$br_filelist = $filestore->get_area_files($br_contextid, 'mod_resource', 'content', 0, 'sortorder DESC, id ASC', false);
+        //foreach ($br_filelist as $f) { $br_filename = $f->get_filename(); }
+        //$currname = "$CFG->wwwroot/pluginfile.php/$br_contextid/mod_resource/content/$br_arrpath[1]/$br_filename";
     }
 }
 
@@ -146,9 +173,9 @@ foreach ($MODINFO as $key => $arr_value) {
     <!--div id="page-header" class="clearfix">   </div-->
     <?php 
 
-    $brand_main_logo  = (isset($branding_url  ))? $branding_url   : $OUTPUT->pix_url('PBSTeacherLine-logoSPC', 'theme');
-    $brand_back_art   = (isset($brandback_url ))? $brandback_url  : $OUTPUT->pix_url('base-back_trnsp_blue', 'theme');
-    $brand_back_color = (isset($branding_color))? $branding_color[0] :'transparent';
+    $brand_main_logo  = ($branding_urls['branding_url']) ? $branding_urls['branding_url'] : $OUTPUT->pix_url('PBSTeacherLine-logoSPC', 'theme');
+    $brand_back_art   = ($branding_urls['brandback_url']) ? $branding_urls['brandback_url'] : $OUTPUT->pix_url('base-back_trnsp_blue', 'theme');
+    $brand_back_color = 'transparent'; //(isset($branding_color))? $branding_color[0] :'transparent';
     ?>
     <div id="page-branding" class="rnd shdw" <?php echo "style='background:url($brand_back_art)repeat scroll 0 0 $brand_back_color;'";?>>
         <div class="cobrand-logo">

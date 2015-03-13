@@ -197,10 +197,10 @@ EOD;
         //r_error_log("1 Include Page Type: " . $include_page_type);
         //r_error_log("\n\n");
         if ($course_modinfo->sectionnum == '0') {
-            r_error_log("1 Extra menu writing $pagename");
+            //r_error_log("1 Extra menu writing $pagename");
             $extrasmenu .= $writeline;
         } else {
-            r_error_log("1 SPC menu writing $pagename");
+            //r_error_log("1 SPC menu writing $pagename");
             $spcmenulines .= $writeline;
         }
     } elseif ($course_modinfo->sectionnum == '0' && $include_page_type) {
